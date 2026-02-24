@@ -223,7 +223,23 @@ const API_URL = 'http://localhost:3000/api';
 
 ## Commit Guidelines
 
+### Manual Commits
 - Use clear, descriptive commit messages
 - Commit format: `type: description`
 - Types: `feat`, `fix`, `update`, `refactor`, `docs`
 - Example: `feat: add product search functionality`
+
+### Automatic Commits (Default)
+All changes are automatically committed and pushed to the remote repository:
+- After completing any task or making file changes, commit immediately
+- Use a clear, descriptive commit message summarizing the changes
+- Always push to remote after commit
+- Commit message format: `type: brief description`
+- Types: `feat`, `fix`, `update`, `refactor`, `docs`, `style`, `chore`
+
+### Workflow
+1. Make changes to files
+2. Run `git add .` to stage changes
+3. Run `git commit -m "message"` with descriptive message
+4. Run `git push` to push to remote
+5. Verify push was successful
