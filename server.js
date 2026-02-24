@@ -28,7 +28,8 @@ function initDB() {
         { id: 5, name: 'PogoJump Extreme', description: 'Maximum height with advanced springs', price: 179, image: 'extreme', featured: true }
       ],
       users: [],
-      orders: []
+      orders: [],
+      reviews: []
     };
     fs.writeFileSync(DB_FILE, JSON.stringify(initialData, null, 2));
   }
@@ -37,7 +38,9 @@ function initDB() {
 // Read database
 function readDB() {
   const data = fs.readFileSync(DB_FILE, 'utf8');
-  return JSON.parse(data);
+  const db = JSON.parse(data);
+  if (!db.reviews) db.reviews = [];
+  return db;
 }
 
 // Write database
@@ -252,6 +255,99 @@ app.delete('/api/products/:id', authMiddleware, adminMiddleware, (req, res) => {
   writeDB(db);
 
   res.json({ message: 'Product deleted' });
+});
+
+// ==================== REVIEWS ROUTES ====================
+
+// Get reviews for a product
+app.get('/api/products/:id/reviews', (req, res) => {
+  const db = readDB();
+  const productId = parseInt(req.params.id);
+  const reviews = (db.reviews || []).filter(r => r.productId === productId);
+  res.json(reviews);
+});
+
+// Add review to product (requires auth)
+app.post('/api/products/:id/reviews', authMiddleware, (req, res) => {
+  const db = readDB();
+  const productId = parseInt(req.params.id);
+  const { rating, review } = req.body;
+
+  if (!rating || !review) {
+    return res.status(400).json({ error: 'Rating and review are required' });
+  }
+
+  if (rating < 1 || rating > 5) {
+    return res.status(400).json({ error: 'Rating must be between 1 and 5' });
+  }
+
+  const product = db.products.find(p => p.id === productId);
+  if (!product) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  const user = db.users.find(u => u.id === req.user.id);
+
+  const newReview = {
+    id: Date.now(),
+    productId,
+    userId: req.user.id,
+    userName: user?.name || 'Anonymous',
+    rating: parseInt(rating),
+    review,
+    createdAt: new Date().toISOString()
+  };
+
+  if (!db.reviews) db.reviews = [];
+  db.reviews.push(newReview);
+  writeDB(db);
+
+  res.json(newReview);
+});
+
+// Delete review (admin or review owner)
+app.delete('/api/reviews/:id', authMiddleware, (req, res) => {
+  const db = readDB();
+  const reviewId = parseInt(req.params.id);
+  const index = db.reviews.findIndex(r => r.id === reviewId);
+
+  if (index === -1) {
+    return res.status(404).json({ error: 'Review not found' });
+  }
+
+  const review = db.reviews[index];
+
+  if (review.userId !== req.user.id && !req.user.isAdmin) {
+    return res.status(403).json({ error: 'You can only delete your own reviews' });
+  }
+
+  db.reviews.splice(index, 1);
+  writeDB(db);
+
+  res.json({ message: 'Review deleted' });
+});
+
+// Get product with reviews
+app.get('/api/products/:id/with-reviews', (req, res) => {
+  const db = readDB();
+  const productId = parseInt(req.params.id);
+  const product = db.products.find(p => p.id === productId);
+
+  if (!product) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  const reviews = (db.reviews || []).filter(r => r.productId === productId);
+  const avgRating = reviews.length > 0
+    ? (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1)
+    : 0;
+
+  res.json({
+    ...product,
+    reviews,
+    avgRating: parseFloat(avgRating),
+    reviewCount: reviews.length
+  });
 });
 
 // ==================== ORDERS ROUTES ====================
