@@ -937,6 +937,487 @@
       padding: 2rem;
     }
 
+    .review-card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .review-card-actions .btn {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.7rem;
+    }
+
+    /* Edit Review Modal */
+    .edit-review-form {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--bg-surface);
+      border-radius: 8px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 240px;
+      height: calc(100vh - 70px);
+      background: var(--bg-surface);
+      border-right: 1px solid rgba(0, 255, 200, 0.1);
+      padding: 1.5rem 0;
+      z-index: 100;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .sidebar.active {
+      transform: translateX(0);
+    }
+
+    .sidebar-section {
+      padding: 0 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-section-title {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 0.25rem;
+    }
+
+    .sidebar-item:hover {
+      background: rgba(0, 255, 200, 0.1);
+      color: var(--neon-cyan);
+    }
+
+    .sidebar-item.active {
+      background: rgba(0, 255, 200, 0.15);
+      color: var(--neon-cyan);
+      border-left: 3px solid var(--neon-cyan);
+    }
+
+    .sidebar-item svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .sidebar-toggle {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      width: 48px;
+      height: 48px;
+      background: var(--neon-cyan);
+      border: none;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 101;
+      box-shadow: 0 4px 20px rgba(0, 255, 200, 0.3);
+    }
+
+    .sidebar-toggle svg {
+      width: 24px;
+      height: 24px;
+      color: var(--bg-primary);
+    }
+
+    /* Main content shift */
+    .main-with-sidebar {
+      margin-left: 0;
+      transition: margin-left 0.3s ease;
+    }
+
+    .main-with-sidebar.active {
+      margin-left: 240px;
+    }
+
+    /* Settings Section */
+    .settings-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .settings-group {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 255, 200, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .settings-group h3 {
+      font-family: var(--font-heading);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .settings-group h3 svg {
+      width: 20px;
+      height: 20px;
+      color: var(--neon-cyan);
+    }
+
+    .setting-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .setting-item:last-child {
+      border-bottom: none;
+    }
+
+    .setting-label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .setting-label span {
+      font-weight: 600;
+    }
+
+    .setting-label small {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Language Selector */
+    .language-select {
+      padding: 0.5rem 1rem;
+      background: var(--bg-surface);
+      border: 1px solid rgba(0, 255, 200, 0.2);
+      border-radius: 6px;
+      color: var(--text-primary);
+      font-size: 1rem;
+      cursor: pointer;
+      min-width: 150px;
+    }
+
+    .language-select:focus {
+      outline: none;
+      border-color: var(--neon-cyan);
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .theme-btn {
+      padding: 0.5rem 1rem;
+      background: var(--bg-surface);
+      border: 1px solid rgba(0, 255, 200, 0.2);
+      border-radius: 6px;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .theme-btn:hover,
+    .theme-btn.active {
+      background: var(--neon-cyan);
+      color: var(--bg-primary);
+      border-color: var(--neon-cyan);
+    }
+
+    /* Theme Presets */
+    .theme-presets {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .theme-preset {
+      padding: 0.75rem;
+      border: 2px solid rgba(0, 255, 200, 0.2);
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-size: 0.8rem;
+    }
+
+    .theme-preset:hover,
+    .theme-preset.active {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+    }
+
+    .theme-preset-preview {
+      width: 100%;
+      height: 30px;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Light Themes */
+    .light-theme {
+      --bg-primary: #ffffff;
+      --bg-surface: #f5f5f5;
+      --bg-card: #fafafa;
+      --text-primary: #1a1a1a;
+      --text-muted: #666666;
+    }
+
+    .light-theme-inverted {
+      --bg-primary: #ffffff;
+      --bg-surface: #f8f8f8;
+      --bg-card: #ffffff;
+      --text-primary: #0a0a0f;
+      --text-muted: #555555;
+    }
+
+    .light-theme-ocean {
+      --bg-primary: #f0f8ff;
+      --bg-surface: #e6f3ff;
+      --bg-card: #ffffff;
+      --text-primary: #003366;
+      --text-muted: #006699;
+      --neon-cyan: #0077be;
+    }
+
+    .light-theme-forest {
+      --bg-primary: #f0fff0;
+      --bg-surface: #e6ffe6;
+      --bg-card: #ffffff;
+      --text-primary: #004d00;
+      --text-muted: #006600;
+      --neon-cyan: #228b22;
+    }
+
+    .light-theme-sunset {
+      --bg-primary: #fff8f0;
+      --bg-surface: #fff0e6;
+      --bg-card: #ffffff;
+      --text-primary: #4a3000;
+      --text-muted: #8b4513;
+      --neon-cyan: #ff8c00;
+      --neon-pink: #ff6347;
+    }
+
+    .light-theme-minimal {
+      --bg-primary: #ffffff;
+      --bg-surface: #fafafa;
+      --bg-card: #ffffff;
+      --text-primary: #000000;
+      --text-muted: #333333;
+      --neon-cyan: #000000;
+    }
+
+    /* Profile Section */
+    .profile-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .profile-avatar-large {
+      width: 120px;
+      height: 120px;
+    }
+
+    .profile-info h2 {
+      font-family: var(--font-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-info p {
+      color: var(--text-muted);
+    }
+
+    .profile-flag {
+      font-size: 2rem;
+      margin-left: 0.5rem;
+    }
+
+    .profile-form .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .profile-form input,
+    .profile-form select {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--bg-surface);
+      border: 1px solid rgba(0, 255, 200, 0.2);
+      border-radius: 6px;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    .profile-form input:focus,
+    .profile-form select:focus {
+      outline: none;
+      border-color: var(--neon-cyan);
+    }
+
+    /* Avatar Creator */
+    .avatar-creator {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 255, 200, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .avatar-creator h3 {
+      font-family: var(--font-heading);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .avatar-preview {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .avatar-preview svg {
+      width: 150px;
+      height: 150px;
+      filter: drop-shadow(0 0 20px var(--neon-cyan));
+    }
+
+    .avatar-options {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .avatar-option-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .avatar-option-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .avatar-option-btn {
+      padding: 0.5rem 1rem;
+      background: var(--bg-surface);
+      border: 1px solid rgba(0, 255, 200, 0.2);
+      border-radius: 6px;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.85rem;
+    }
+
+    .avatar-option-btn:hover,
+    .avatar-option-btn.active {
+      background: var(--neon-cyan);
+      color: var(--bg-primary);
+      border-color: var(--neon-cyan);
+    }
+
+    .avatar-option-btn.color-btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+    }
+
+    .color-cyan { background: #00ffc8; }
+    .color-pink { background: #ff6b9d; }
+    .color-violet { background: #7c3aed; }
+    .color-green { background: #22c55e; }
+    .color-gold { background: #fbbf24; }
+    .color-silver { background: #94a3b8; }
+
+    .avatar-save-btn {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    /* Flag Selector */
+    .flag-select {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 0.5rem;
+      background: var(--bg-surface);
+      border-radius: 6px;
+    }
+
+    .flag-option {
+      font-size: 1.5rem;
+      padding: 0.25rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .flag-option:hover,
+    .flag-option.active {
+      border-color: var(--neon-cyan);
+      background: rgba(0, 255, 200, 0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+      .main-with-sidebar.active {
+        margin-left: 200px;
+      }
+      .sidebar-toggle {
+        display: flex;
+      }
+      .theme-presets {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .profile-header {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
     /* Footer */
     footer {
       padding: 2rem;
@@ -979,12 +1460,12 @@
   <nav>
     <div class="logo" onclick="showSection('hero')">POGOJUMP</div>
     <ul class="nav-links" id="navLinks">
-      <li><a onclick="showSection('hero')">Home</a></li>
-      <li><a onclick="showSection('products')">Products</a></li>
-      <li><a onclick="showSection('cart')">Cart (<span id="cartCount">0</span>)</a></li>
+      <li><a onclick="showSection('hero')" data-i18n="home">Home</a></li>
+      <li><a onclick="showSection('products')" data-i18n="products">Products</a></li>
+      <li><a onclick="showSection('cart')" data-i18n="cart">Cart (<span id="cartCount">0</span>)</a></li>
       <li id="authLinks">
-        <a onclick="showSection('login')">Login</a>
-        <a onclick="showSection('register')">Register</a>
+        <a onclick="showSection('login')" data-i18n="login">Login</a>
+        <a onclick="showSection('register')" data-i18n="register">Register</a>
       </li>
       <li id="userLinks" style="display: none;">
         <div class="user-info">
@@ -1124,6 +1605,184 @@
         </div>
       </div>
     </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="section">
+      <div class="container">
+        <div class="settings-container">
+          <div class="section-header">
+            <h2 data-i18n="settings">Settings</h2>
+          </div>
+          
+          <div class="settings-group">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span data-i18n="language">Language</span>
+            </h3>
+            <div class="setting-item">
+              <div class="setting-label">
+                <span data-i18n="language">Language</span>
+                <small>Select your preferred language</small>
+              </div>
+              <select class="language-select" id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+                <option value="es">Español</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="settings-group">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+              <span data-i18n="theme">Theme</span>
+            </h3>
+            <div class="setting-item">
+              <div class="setting-label">
+                <span data-i18n="theme">Theme</span>
+                <small>Choose between dark and light modes</small>
+              </div>
+              <div class="theme-toggle">
+                <button class="theme-btn active" id="darkModeBtn" onclick="setTheme('dark')" data-i18n="darkMode">Dark</button>
+                <button class="theme-btn" id="lightModeBtn" onclick="setTheme('light')" data-i18n="lightMode">Light</button>
+              </div>
+            </div>
+            <div class="setting-item" id="themePresetSection" style="display: none;">
+              <div class="setting-label">
+                <span data-i18n="preset">Preset</span>
+                <small>Choose a light theme style</small>
+              </div>
+              <div class="theme-presets">
+                <div class="theme-preset active" data-preset="inverted" onclick="setThemePreset('inverted')">
+                  <div class="theme-preset-preview" style="background: linear-gradient(135deg, #ffffff, #00ffc8);"></div>
+                  <span data-i18n="inverted">Inverted</span>
+                </div>
+                <div class="theme-preset" data-preset="ocean" onclick="setThemePreset('ocean')">
+                  <div class="theme-preset-preview" style="background: linear-gradient(135deg, #f0f8ff, #0077be);"></div>
+                  <span data-i18n="ocean">Ocean</span>
+                </div>
+                <div class="theme-preset" data-preset="forest" onclick="setThemePreset('forest')">
+                  <div class="theme-preset-preview" style="background: linear-gradient(135deg, #f0fff0, #228b22);"></div>
+                  <span data-i18n="forest">Forest</span>
+                </div>
+                <div class="theme-preset" data-preset="sunset" onclick="setThemePreset('sunset')">
+                  <div class="theme-preset-preview" style="background: linear-gradient(135deg, #fff8f0, #ff8c00);"></div>
+                  <span data-i18n="sunset">Sunset</span>
+                </div>
+                <div class="theme-preset" data-preset="minimal" onclick="setThemePreset('minimal')">
+                  <div class="theme-preset-preview" style="background: linear-gradient(135deg, #ffffff, #000000);"></div>
+                  <span data-i18n="minimal">Minimal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="section">
+      <div class="container">
+        <div class="profile-container">
+          <div class="section-header">
+            <h2 data-i18n="profile">My Profile</h2>
+          </div>
+          
+          <div class="profile-header">
+            <div class="profile-avatar-large" id="profileAvatarDisplay"></div>
+            <div class="profile-info">
+              <h2 id="profileName">User Name</h2>
+              <p id="profileEmail">user@email.com</p>
+            </div>
+          </div>
+
+          <div class="profile-form">
+            <div class="settings-group">
+              <h3 data-i18n="changeUsername">Change Username</h3>
+              <div class="form-group">
+                <label data-i18n="username">Username</label>
+                <input type="text" id="profileUsernameInput" placeholder="Enter new username">
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <h3 data-i18n="countryFlag">Country Flag</h3>
+              <div class="form-group">
+                <label data-i18n="selectFlag">Select Flag</label>
+                <div class="flag-select" id="flagSelect"></div>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <h3 data-i18n="createAvatar">Create Avatar</h3>
+              <div class="avatar-creator">
+                <div class="avatar-preview" id="avatarPreview"></div>
+                <div class="avatar-options">
+                  <div class="avatar-option-group">
+                    <label data-i18n="body">Body</label>
+                    <div class="avatar-option-buttons" id="avatarBody"></div>
+                  </div>
+                  <div class="avatar-option-group">
+                    <label data-i18n="eyes">Eyes</label>
+                    <div class="avatar-option-buttons" id="avatarEyes"></div>
+                  </div>
+                  <div class="avatar-option-group">
+                    <label data-i18n="color">Color</label>
+                    <div class="avatar-option-buttons" id="avatarColor"></div>
+                  </div>
+                  <div class="avatar-option-group">
+                    <label data-i18n="accessory">Accessory</label>
+                    <div class="avatar-option-buttons" id="avatarAccessory"></div>
+                  </div>
+                  <div class="avatar-option-group">
+                    <label data-i18n="mouth">Mouth</label>
+                    <div class="avatar-option-buttons" id="avatarMouth"></div>
+                  </div>
+                </div>
+                <button class="btn btn-primary avatar-save-btn" onclick="saveProfile()" data-i18n="saveProfile">Save Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title>Menu</div>
+        <div class="sidebar-item" onclick="showSection('settings')" data-section="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          <span data-i18n="settings">Settings</span>
+        </div>
+        <div class="sidebar-item" onclick="showSection('profile')" data-section="profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span data-i18n="profile">My Profile</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
 
     <!-- Cart Section -->
     <section id="cart" class="section">
@@ -1289,11 +1948,418 @@
     let token = localStorage.getItem('token');
     let cart = JSON.parse(localStorage.getItem('cart') || '[]');
     let products = [];
+    let currentLanguage = localStorage.getItem('language') || 'en';
+    let currentTheme = localStorage.getItem('theme') || 'dark';
+    let themePreset = localStorage.getItem('themePreset') || 'default';
+
+    // Translations
+    const translations = {
+      en: {
+        home: 'Home',
+        products: 'Products',
+        cart: 'Cart',
+        login: 'Login',
+        register: 'Register',
+        logout: 'Logout',
+        admin: 'Admin',
+        dashboard: 'Dashboard',
+        settings: 'Settings',
+        profile: 'MyProfile',
+        exploreModels: 'Explore Models',
+        signIn: 'Sign In',
+        learnMore: 'Learn More',
+        findPerfect: 'Find the perfect pogo stick for your adventure',
+        ourModels: 'Our Models',
+        whyPogojump: 'Why PogoJump',
+        about: 'About',
+        contact: 'Contact',
+        getInTouch: 'Get in Touch',
+        readyToJump: 'Ready to jump? Send us a message!',
+        yourName: 'Your Name',
+        emailAddress: 'Email Address',
+        yourMessage: 'Your Message',
+        sendMessage: 'Send Message',
+        welcomeBack: 'Welcome Back',
+        createAccount: 'Create Account',
+        dontHaveAccount: "Don't have an account?",
+        alreadyHaveAccount: 'Already have an account?',
+        addToCart: 'Add to Cart',
+        details: 'Details',
+        customerReviews: 'Customer Reviews',
+        writeReview: 'Write a Review',
+        yourRating: 'Your Rating',
+        submitReview: 'Submit Review',
+        loginToReview: 'Please login to leave a review',
+        noReviews: 'No reviews yet. Be the first to review!',
+        reviews: 'reviews',
+        backToProducts: 'Back to Products',
+        featured: 'Featured',
+        adminDashboard: 'Admin Dashboard',
+        addProduct: '+ Add Product',
+        orders: 'Orders',
+        users: 'Users',
+        language: 'Language',
+        theme: 'Theme',
+        darkMode: 'Dark Mode',
+        lightMode: 'Light Mode',
+        inverted: 'Inverted',
+        preset: 'Preset',
+        ocean: 'Ocean',
+        forest: 'Forest',
+        sunset: 'Sunset',
+        minimal: 'Minimal',
+        username: 'Username',
+        changeUsername: 'Change Username',
+        countryFlag: 'Country Flag',
+        selectFlag: 'Select Flag',
+        createAvatar: 'Create Avatar',
+        body: 'Body',
+        eyes: 'Eyes',
+        color: 'Color',
+        accessory: 'Accessory',
+        mouth: 'Mouth',
+        saveProfile: 'Save Profile',
+        edit: 'Edit',
+        delete: 'Delete',
+        cancel: 'Cancel',
+        save: 'Save',
+        editReview: 'Edit Review',
+        deleteReview: 'Delete Review',
+        confirmDelete: 'Are you sure you want to delete this review?',
+        superioBounce: 'Superior Bounce',
+        builtToLast: 'Built to Last',
+        funForAllAges: 'Fun for All Ages',
+        energyReturn: 'Energy Return',
+        superiorBounceDesc: 'Advanced spring technology delivers unmatched bounce height and responsiveness',
+        builtToLastDesc: 'Premium materials and rigorous testing ensure years of reliable use',
+        funForAllAgesDesc: 'Multiple models designed for children, teens, and adults alike',
+        energyReturnDesc: 'Smart engineering maximizes energy return with every jump',
+        pogojumpNeon: 'Beginner-friendly with vibrant LED lights',
+        pogojumpPro: 'Professional grade with higher bounce',
+        pogojumpJunior: 'For kids with extra safety features',
+        pogojumpCarbon: 'Ultra-light carbon fiber design',
+        pogojumpExtreme: 'Maximum height with advanced springs',
+        happyJumpers: 'Happy Jumpers',
+        premiumModels: 'Premium Models',
+        yearsOfExcellence: 'Years of Excellence',
+        redefininFun: 'Redefining fun since 2018',
+        atPogojump: 'At PogoJump, we believe in the power of simple joy.',
+        yourCart: 'Your Cart',
+        placeOrder: 'Place Order',
+        total: 'Total'
+      },
+      de: {
+        home: 'Startseite',
+        products: 'Produkte',
+        cart: 'Warenkorb',
+        login: 'Anmelden',
+        register: 'Registrieren',
+        logout: 'Abmelden',
+        admin: 'Admin',
+        dashboard: 'Dashboard',
+        settings: 'Einstellungen',
+        profile: 'Mein Profil',
+        exploreModels: 'Modelle entdecken',
+        signIn: 'Anmelden',
+        learnMore: 'Mehr erfahren',
+        findPerfect: 'Finde den perfekten Pogo-Stick für dein Abenteuer',
+        ourModels: 'Unsere Modelle',
+        whyPogojump: 'Warum PogoJump',
+        about: 'Über uns',
+        contact: 'Kontakt',
+        getInTouch: 'Kontaktiere uns',
+        readyToJump: 'Bereit zum Hüpfen? Schreib uns eine Nachricht!',
+        yourName: 'Dein Name',
+        emailAddress: 'E-Mail-Adresse',
+        yourMessage: 'Deine Nachricht',
+        sendMessage: 'Nachricht senden',
+        welcomeBack: 'Willkommen zurück',
+        createAccount: 'Konto erstellen',
+        dontHaveAccount: 'Noch kein Konto?',
+        alreadyHaveAccount: 'Bereits ein Konto?',
+        addToCart: 'In den Warenkorb',
+        details: 'Details',
+        customerReviews: 'Kundenbewertungen',
+        writeReview: 'Bewertung schreiben',
+        yourRating: 'Deine Bewertung',
+        submitReview: 'Bewertung absenden',
+        loginToReview: 'Bitte melde dich an, um eine Bewertung zu schreiben',
+        noReviews: 'Noch keine Bewertungen. Sei der Erste!',
+        reviews: 'Bewertungen',
+        backToProducts: 'Zurück zu Produkten',
+        featured: 'Empfohlen',
+        adminDashboard: 'Admin-Dashboard',
+        addProduct: '+ Produkt hinzufügen',
+        orders: 'Bestellungen',
+        users: 'Benutzer',
+        language: 'Sprache',
+        theme: 'Design',
+        darkMode: 'Dunkelmodus',
+        lightMode: 'Hellmodus',
+        inverted: 'Invertiert',
+        preset: 'Vorlage',
+        ocean: 'Ozean',
+        forest: 'Wald',
+        sunset: 'Sonnenuntergang',
+        minimal: 'Minimal',
+        username: 'Benutzername',
+        changeUsername: 'Benutzername ändern',
+        countryFlag: 'Land',
+        selectFlag: 'Flagge auswählen',
+        createAvatar: 'Avatar erstellen',
+        body: 'Körper',
+        eyes: 'Augen',
+        color: 'Farbe',
+        accessory: 'Zubehör',
+        mouth: 'Mund',
+        saveProfile: 'Profil speichern',
+        edit: 'Bearbeiten',
+        delete: 'Löschen',
+        cancel: 'Abbrechen',
+        save: 'Speichern',
+        editReview: 'Bewertung bearbeiten',
+        deleteReview: 'Bewertung löschen',
+        confirmDelete: 'Möchtest du diese Bewertung wirklich löschen?',
+        superioBounce: 'Super Sprungkraft',
+        builtToLast: 'Langlebig',
+        funForAllAges: 'Für alle Altersgruppen',
+        energyReturn: 'Energierückgewinnung',
+        superiorBounceDesc: 'Fortschrittliche Federungstechnologie für unübertroffene Sprunghöhe',
+        builtToLastDesc: 'Hochwertige Materialien und strenge Tests sorgen für jahrelange Nutzung',
+        funForAllAgesDesc: 'Mehrere Modelle für Kinder, Teenager und Erwachsene',
+        energyReturnDesc: 'Intelligente Technik maximiert die Energierückgewinnung bei jedem Sprung',
+        pogojumpNeon: 'Anfängerfreundlich mit leuchtenden LED-Lichtern',
+        pogojumpPro: 'Professionelle Qualität mit höherem Sprung',
+        pogojumpJunior: 'Für Kinder mit extra Sicherheitsfunktionen',
+        pogojumpCarbon: 'Ultraleichtes Carbon-Design',
+        pogojumpExtreme: 'Maximale Höhe mit fortschrittlichen Federn',
+        happyJumpers: 'Zufriedene Springer',
+        premiumModels: 'Premium-Modelle',
+        yearsOfExcellence: 'Jahre Erfahrung',
+        redefininFun: 'Spaß neu definieren seit 2018',
+        atPogojump: 'Bei PogoJump glauben wir an die Kraft einfacher Freude.',
+        yourCart: 'Dein Warenkorb',
+        placeOrder: 'Bestellung aufgeben',
+        total: 'Gesamt'
+      },
+      ru: {
+        home: 'Главная',
+        products: 'Товары',
+        cart: 'Корзина',
+        login: 'Войти',
+        register: 'Регистрация',
+        logout: 'Выйти',
+        admin: 'Админ',
+        dashboard: 'Панель',
+        settings: 'Настройки',
+        profile: 'Мой профиль',
+        exploreModels: 'Смотреть модели',
+        signIn: 'Войти',
+        learnMore: 'Узнать больше',
+        findPerfect: 'Найди идеальный пого-стик для своего приключения',
+        ourModels: 'Наши модели',
+        whyPogojump: 'Почему PogoJump',
+        about: 'О нас',
+        contact: 'Контакты',
+        getInTouch: 'Связаться',
+        readyToJump: 'Готов прыгать? Напиши нам!',
+        yourName: 'Ваше имя',
+        emailAddress: 'Email',
+        yourMessage: 'Ваше сообщение',
+        sendMessage: 'Отправить',
+        welcomeBack: 'С возвращением',
+        createAccount: 'Создать аккаунт',
+        dontHaveAccount: 'Нет аккаунта?',
+        alreadyHaveAccount: 'Уже есть аккаунт?',
+        addToCart: 'В корзину',
+        details: 'Подробнее',
+        customerReviews: 'Отзывы',
+        writeReview: 'Написать отзыв',
+        yourRating: 'Ваша оценка',
+        submitReview: 'Отправить отзыв',
+        loginToReview: 'Войдите, чтобы оставить отзыв',
+        noReviews: 'Пока нет отзывов. Будьте первым!',
+        reviews: 'отзывов',
+        backToProducts: 'К товарам',
+        featured: 'Рекомендуем',
+        adminDashboard: 'Панель админа',
+        addProduct: '+ Добавить товар',
+        orders: 'Заказы',
+        users: 'Пользователи',
+        language: 'Язык',
+        theme: 'Тема',
+        darkMode: 'Тёмный режим',
+        lightMode: 'Светлый режим',
+        inverted: 'Инвертированный',
+        preset: 'Пресет',
+        ocean: 'Океан',
+        forest: 'Лес',
+        sunset: 'Закат',
+        minimal: 'Минимальный',
+        username: 'Имя пользователя',
+        changeUsername: 'Изменить имя',
+        countryFlag: 'Страна',
+        selectFlag: 'Выбрать флаг',
+        createAvatar: 'Создать аватар',
+        body: 'Тело',
+        eyes: 'Глаза',
+        color: 'Цвет',
+        accessory: 'Аксессуар',
+        mouth: 'Рот',
+        saveProfile: 'Сохранить',
+        edit: 'Изменить',
+        delete: 'Удалить',
+        cancel: 'Отмена',
+        save: 'Сохранить',
+        editReview: 'Редактировать отзыв',
+        deleteReview: 'Удалить отзыв',
+        confirmDelete: 'Вы уверены, что хотите удалить этот отзыв?',
+        superioBounce: 'Мощный прыжок',
+        builtToLast: 'Надёжность',
+        funForAllAges: 'Для всех возрастов',
+        energyReturn: 'Возврат энергии',
+        superiorBounceDesc: 'Продвинутая пружинная технология для максимальной высоты прыжка',
+        builtToLastDesc: 'Премиальные материалы и строгие тесты для долгой службы',
+        funForAllAgesDesc: 'Модели для детей, подростков и взрослых',
+        energyReturnDesc: 'Умная инженерия максимизирует возврат энергии при каждом прыжке',
+        pogojumpNeon: 'Для начинающих с яркими LED огнями',
+        pogojumpPro: 'Профессиональное качество с большим отскоком',
+        pogojumpJunior: 'Для детей с дополнительной защитой',
+        pogojumpCarbon: 'Сверхлёгкий карбон',
+        pogojumpExtreme: 'Максимальная высота с продвинутыми пружинами',
+        happyJumpers: 'Довольных прыгунов',
+        premiumModels: 'Премиум моделей',
+        yearsOfExcellence: 'Лет опыта',
+        redefininFun: 'Переосмысливаем веселье с 2018',
+        atPogojump: 'В PogoJump мы верим в силу простой радости.',
+        yourCart: 'Ваша корзина',
+        placeOrder: 'Оформить заказ',
+        total: 'Итого'
+      },
+      es: {
+        home: 'Inicio',
+        products: 'Productos',
+        cart: 'Carrito',
+        login: 'Iniciar sesión',
+        register: 'Registrarse',
+        logout: 'Cerrar sesión',
+        admin: 'Admin',
+        dashboard: 'Panel',
+        settings: 'Ajustes',
+        profile: 'Mi perfil',
+        exploreModels: 'Explorar modelos',
+        signIn: 'Iniciar sesión',
+        learnMore: 'Más información',
+        findPerfect: 'Encuentra el pogo stick perfecto para tu aventura',
+        ourModels: 'Nuestros modelos',
+        whyPogojump: 'Por qué PogoJump',
+        about: 'Acerca de',
+        contact: 'Contacto',
+        getInTouch: 'Contáctanos',
+        readyToJump: '¿Listo para saltar? ¡Escríbenos!',
+        yourName: 'Tu nombre',
+        emailAddress: 'Correo electrónico',
+        yourMessage: 'Tu mensaje',
+        sendMessage: 'Enviar mensaje',
+        welcomeBack: 'Bienvenido de nuevo',
+        createAccount: 'Crear cuenta',
+        dontHaveAccount: '¿No tienes cuenta?',
+        alreadyHaveAccount: '¿Ya tienes cuenta?',
+        addToCart: 'Añadir al carrito',
+        details: 'Detalles',
+        customerReviews: 'Reseñas de clientes',
+        writeReview: 'Escribir reseña',
+        yourRating: 'Tu puntuación',
+        submitReview: 'Enviar reseña',
+        loginToReview: 'Inicia sesión para dejar una reseña',
+        noReviews: 'Aún no hay reseñas. ¡Sé el primero!',
+        reviews: 'reseñas',
+        backToProducts: 'Volver a productos',
+        featured: 'Destacado',
+        adminDashboard: 'Panel de admin',
+        addProduct: '+ Añadir producto',
+        orders: 'Pedidos',
+        users: 'Usuarios',
+        language: 'Idioma',
+        theme: 'Tema',
+        darkMode: 'Modo oscuro',
+        lightMode: 'Modo claro',
+        inverted: 'Invertido',
+        preset: 'Preset',
+        ocean: 'Océano',
+        forest: 'Bosque',
+        sunset: 'Atardecer',
+        minimal: 'Minimal',
+        username: 'Nombre de usuario',
+        changeUsername: 'Cambiar nombre',
+        countryFlag: 'País',
+        selectFlag: 'Seleccionar bandera',
+        createAvatar: 'Crear avatar',
+        body: 'Cuerpo',
+        eyes: 'Ojos',
+        color: 'Color',
+        accessory: 'Accesorio',
+        mouth: 'Boca',
+        saveProfile: 'Guardar perfil',
+        edit: 'Editar',
+        delete: 'Eliminar',
+        cancel: 'Cancelar',
+        save: 'Guardar',
+        editReview: 'Editar reseña',
+        deleteReview: 'Eliminar reseña',
+        confirmDelete: '¿Estás seguro de que quieres eliminar esta reseña?',
+        superioBounce: 'Salto superior',
+        builtToLast: 'Durabilidad',
+        funForAllAges: 'Diversión para todos',
+        energyReturn: 'Retorno de energía',
+        superiorBounceDesc: 'Tecnología de resorte avanzada para un salto sin igual',
+        builtToLastDesc: 'Materiales premium y pruebas rigurosas',
+        funForAllAgesDesc: 'Múltiples modelos para niños, adolescentes y adultos',
+        energyReturnDesc: 'Ingeniería inteligente maximiza el retorno de energía',
+        pogojumpNeon: 'Para principiantes con luces LED brillantes',
+        pogojumpPro: 'Calidad profesional con mayor rebote',
+        pogojumpJunior: 'Para niños con características de seguridad extra',
+        pogojumpCarbon: 'Diseño ultraligero de carbono',
+        pogojumpExtreme: 'Altura máxima con resortes avanzados',
+        happyJumpers: 'Saltadores felices',
+        premiumModels: 'Modelos premium',
+        yearsOfExcellence: 'Años de experiencia',
+        redefininFun: 'Redefiniendo la diversión desde 2018',
+        atPogojump: 'En PogoJump creemos en el poder de la alegría simple.',
+        yourCart: 'Tu carrito',
+        placeOrder: 'Realizar pedido',
+        total: 'Total'
+      }
+    };
+
+    function t(key) {
+      return translations[currentLanguage]?.[key] || translations.en[key] || key;
+    }
+
+    function applyTranslations() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = t(key);
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        el.placeholder = t(key);
+      });
+    }
+
+    function applyTheme() {
+      document.body.classList.remove('light-theme', 'light-theme-inverted', 'light-theme-ocean', 'light-theme-forest', 'light-theme-sunset', 'light-theme-minimal');
+      if (currentTheme === 'light') {
+        document.body.classList.add('light-theme-' + themePreset);
+      }
+    }
 
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       loadProducts();
       updateCartUI();
+      applyTheme();
+      applyTranslations();
       if (token) checkAuth();
     });
 
@@ -1304,6 +2370,18 @@
       
       if (id === 'cart') renderCart();
       if (id === 'admin') loadAdminData();
+      if (id === 'settings') loadSettings();
+      if (id === 'profile') loadProfile();
+      
+      // Update sidebar active state
+      document.querySelectorAll('.sidebar-item').forEach(item => {
+        item.classList.toggle('active', item.dataset.section === id);
+      });
+      
+      // Close sidebar on mobile
+      if (window.innerWidth <= 768) {
+        document.getElementById('sidebar').classList.remove('active');
+      }
       
       window.scrollTo(0, 0);
       toggleMenu(false);
@@ -1318,6 +2396,266 @@
       } else {
         nav.classList.toggle('active');
         menu.classList.toggle('active');
+      }
+    }
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    // Theme
+    function setTheme(theme) {
+      currentTheme = theme;
+      localStorage.setItem('theme', theme);
+      applyTheme();
+      
+      document.getElementById('darkModeBtn').classList.toggle('active', theme === 'dark');
+      document.getElementById('lightModeBtn').classList.toggle('active', theme === 'light');
+      document.getElementById('themePresetSection').style.display = theme === 'light' ? 'block' : 'none';
+    }
+
+    function setThemePreset(preset) {
+      themePreset = preset;
+      localStorage.setItem('themePreset', preset);
+      applyTheme();
+      
+      document.querySelectorAll('.theme-preset').forEach(el => {
+        el.classList.toggle('active', el.dataset.preset === preset);
+      });
+    }
+
+    // Language
+    function changeLanguage(lang) {
+      currentLanguage = lang;
+      localStorage.setItem('language', lang);
+      applyTranslations();
+      showToast('Language changed');
+    }
+
+    function loadSettings() {
+      document.getElementById('languageSelect').value = currentLanguage;
+      setTheme(currentTheme);
+      if (currentTheme === 'light') {
+        setThemePreset(themePreset);
+      }
+    }
+
+    // Profile
+    function loadProfile() {
+      if (!currentUser) {
+        showSection('login');
+        return;
+      }
+      
+      document.getElementById('profileName').textContent = currentUser.name;
+      document.getElementById('profileEmail').textContent = currentUser.email;
+      document.getElementById('profileUsernameInput').value = currentUser.name;
+      
+      renderAvatarCreator();
+      renderFlagSelector();
+      renderAvatarPreview(currentUser.avatar || { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' });
+      renderProfileAvatar(currentUser.avatar || { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' });
+    }
+
+    // Avatar Creator
+    const avatarOptions = {
+      body: ['blob', 'sphere', 'cube', 'crystal', 'star', 'hexagon'],
+      eyes: ['cyclops', 'threeEyes', 'robot', 'alien', 'glowing'],
+      color: ['cyan', 'pink', 'violet', 'green', 'gold', 'silver'],
+      accessory: ['antenna', 'halo', 'wings', 'crown', 'orb'],
+      mouth: ['smile', 'cat', 'line', 'dot']
+    };
+
+    const colorMap = {
+      cyan: '#00ffc8',
+      pink: '#ff6b9d',
+      violet: '#7c3aed',
+      green: '#22c55e',
+      gold: '#fbbf24',
+      silver: '#94a3b8'
+    };
+
+    let currentAvatar = { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' };
+
+    function renderAvatarCreator() {
+      const bodyContainer = document.getElementById('avatarBody');
+      const eyesContainer = document.getElementById('avatarEyes');
+      const colorContainer = document.getElementById('avatarColor');
+      const accessoryContainer = document.getElementById('avatarAccessory');
+      const mouthContainer = document.getElementById('avatarMouth');
+
+      bodyContainer.innerHTML = avatarOptions.body.map(opt => 
+        `<button class="avatar-option-btn ${currentAvatar.body === opt ? 'active' : ''}" onclick="selectAvatarOption('body', '${opt}')">${opt}</button>`
+      ).join('');
+
+      eyesContainer.innerHTML = avatarOptions.eyes.map(opt => 
+        `<button class="avatar-option-btn ${currentAvatar.eyes === opt ? 'active' : ''}" onclick="selectAvatarOption('eyes', '${opt}')">${opt}</button>`
+      ).join('');
+
+      colorContainer.innerHTML = avatarOptions.color.map(opt => 
+        `<button class="avatar-option-btn color-btn color-${opt} ${currentAvatar.color === opt ? 'active' : ''}" onclick="selectAvatarOption('color', '${opt}')"></button>`
+      ).join('');
+
+      accessoryContainer.innerHTML = avatarOptions.accessory.map(opt => 
+        `<button class="avatar-option-btn ${currentAvatar.accessory === opt ? 'active' : ''}" onclick="selectAvatarOption('accessory', '${opt}')">${opt}</button>`
+      ).join('');
+
+      mouthContainer.innerHTML = avatarOptions.mouth.map(opt => 
+        `<button class="avatar-option-btn ${currentAvatar.mouth === opt ? 'active' : ''}" onclick="selectAvatarOption('mouth', '${opt}')">${opt}</button>`
+      ).join('');
+    }
+
+    function selectAvatarOption(category, value) {
+      currentAvatar[category] = value;
+      renderAvatarCreator();
+      renderAvatarPreview(currentAvatar);
+    }
+
+    function generateAvatarSVG(avatar) {
+      const color = colorMap[avatar.color] || '#00ffc8';
+      let bodySVG = '';
+      
+      switch(avatar.body) {
+        case 'blob':
+          bodySVG = `<ellipse cx="75" cy="80" rx="55" ry="50" fill="${color}" opacity="0.8"/>`;
+          break;
+        case 'sphere':
+          bodySVG = `<circle cx="75" cy="80" r="55" fill="${color}"/>`;
+          break;
+        case 'cube':
+          bodySVG = `<rect x="30" y="40" width="90" height="80" rx="8" fill="${color}"/>`;
+          break;
+        case 'crystal':
+          bodySVG = `<polygon points="75,25 115,65 75,135 35,65" fill="${color}" opacity="0.8"/>`;
+          break;
+        case 'star':
+          bodySVG = `<polygon points="75,20 90,55 125,55 98,80 108,115 75,95 42,115 52,80 25,55 60,55" fill="${color}"/>`;
+          break;
+        case 'hexagon':
+          bodySVG = `<polygon points="75,25 115,50 115,110 75,135 35,110 35,50" fill="${color}"/>`;
+          break;
+      }
+
+      let eyesSVG = '';
+      switch(avatar.eyes) {
+        case 'cyclops':
+          eyesSVG = `<circle cx="75" cy="70" r="20" fill="#0a0a0f"/><circle cx="75" cy="70" r="8" fill="${color}"/>`;
+          break;
+        case 'threeEyes':
+          eyesSVG = `<circle cx="50" cy="65" r="12" fill="#0a0a0f"/><circle cx="75" cy="55" r="15" fill="#0a0a0f"/><circle cx="100" cy="65" r="12" fill="#0a0a0f"/><circle cx="50" cy="65" r="5" fill="${color}"/><circle cx="75" cy="55" r="7" fill="${color}"/><circle cx="100" cy="65" r="5" fill="${color}"/>`;
+          break;
+        case 'robot':
+          eyesSVG = `<rect x="45" y="60" width="25" height="15" rx="3" fill="#0a0a0f"/><rect x="80" y="60" width="25" height="15" rx="3" fill="#0a0a0f"/><rect x="50" y="64" width="8" height="7" fill="${color}"/><rect x="85" y="64" width="8" height="7" fill="${color}"/>`;
+          break;
+        case 'alien':
+          eyesSVG = `<ellipse cx="55" cy="70" rx="18" ry="22" fill="#0a0a0f"/><ellipse cx="95" cy="70" rx="18" ry="22" fill="#0a0a0f"/><ellipse cx="55" cy="70" rx="10" ry="15" fill="#1a1a2e"/><ellipse cx="95" cy="70" rx="10" ry="15" fill="#1a1a2e"/>`;
+          break;
+        case 'glowing':
+          eyesSVG = `<circle cx="60" cy="70" r="18" fill="${color}" opacity="0.3"/><circle cx="90" cy="70" r="18" fill="${color}" opacity="0.3"/><circle cx="60" cy="70" r="10" fill="${color}" opacity="0.6"/><circle cx="90" cy="70" r="10" fill="${color}" opacity="0.6"/><circle cx="60" cy="70" r="4" fill="#fff"/><circle cx="90" cy="70" r="4" fill="#fff"/>`;
+          break;
+      }
+
+      let accessorySVG = '';
+      switch(avatar.accessory) {
+        case 'antenna':
+          accessorySVG = `<line x1="75" y1="25" x2="75" y2="5" stroke="${color}" stroke-width="3"/><circle cx="75" cy="5" r="5" fill="${color}"/>`;
+          break;
+        case 'halo':
+          accessorySVG = `<ellipse cx="75" cy="30" rx="40" ry="8" fill="none" stroke="${color}" stroke-width="3"/>`;
+          break;
+        case 'wings':
+          accessorySVG = `<path d="M20 80 Q5 50 20 30 Q35 50 20 80" fill="${color}" opacity="0.6"/><path d="M130 80 Q145 50 130 30 Q115 50 130 80" fill="${color}" opacity="0.6"/>`;
+          break;
+        case 'crown':
+          accessorySVG = `<polygon points="45,35 55,15 75,30 95,15 105,35 75,45" fill="${color}"/>`;
+          break;
+        case 'orb':
+          accessorySVG = `<circle cx="30" cy="50" r="8" fill="${color}" opacity="0.6"/><circle cx="120" cy="50" r="8" fill="${color}" opacity="0.6"/><circle cx="40" cy="120" r="6" fill="${color}" opacity="0.4"/><circle cx="110" cy="120" r="6" fill="${color}" opacity="0.4"/>`;
+          break;
+      }
+
+      let mouthSVG = '';
+      switch(avatar.mouth) {
+        case 'smile':
+          mouthSVG = `<path d="M55 100 Q75 120 95 100" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>`;
+          break;
+        case 'cat':
+          mouthSVG = `<path d="M55 100 Q65 110 75 100 Q85 110 95 100" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>`;
+          break;
+        case 'line':
+          mouthSVG = `<line x1="60" y1="105" x2="90" y2="105" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>`;
+          break;
+        case 'dot':
+          mouthSVG = `<circle cx="75" cy="105" r="4" fill="#0a0a0f"/>`;
+          break;
+      }
+
+      return `<svg viewBox="0 0 150 150" fill="none">${accessorySVG}${bodySVG}${eyesSVG}${mouthSVG}</svg>`;
+    }
+
+    function renderAvatarPreview(avatar) {
+      document.getElementById('avatarPreview').innerHTML = generateAvatarSVG(avatar);
+    }
+
+    function renderProfileAvatar(avatar) {
+      document.getElementById('profileAvatarDisplay').innerHTML = generateAvatarSVG(avatar);
+    }
+
+    // Flags
+    const flags = [
+      { code: 'us', flag: '🇺🇸' }, { code: 'gb', flag: '🇬🇧' }, { code: 'de', flag: '🇩🇪' },
+      { code: 'fr', flag: '🇫🇷' }, { code: 'es', flag: '🇪🇸' }, { code: 'it', flag: '🇮🇹' },
+      { code: 'ru', flag: '🇷🇺' }, { code: 'jp', flag: '🇯🇵' }, { code: 'cn', flag: '🇨🇳' },
+      { code: 'kr', flag: '🇰🇷' }, { code: 'in', flag: '🇮🇳' }, { code: 'br', flag: '🇧🇷' },
+      { code: 'ca', flag: '🇨🇦' }, { code: 'au', flag: '🇦🇺' }, { code: 'mx', flag: '🇲🇽' },
+      { code: 'nl', flag: '🇳🇱' }, { code: 'se', flag: '🇸🇪' }, { code: 'ch', flag: '🇨🇭' },
+      { code: 'at', flag: '🇦🇹' }, { code: 'pl', flag: '🇵🇱' }
+    ];
+
+    let selectedFlag = null;
+
+    function renderFlagSelector() {
+      const container = document.getElementById('flagSelect');
+      container.innerHTML = flags.map(f => 
+        `<span class="flag-option ${currentUser?.flag === f.code ? 'active' : ''}" onclick="selectFlag('${f.code}', '${f.flag}')">${f.flag}</span>`
+      ).join('');
+      selectedFlag = currentUser?.flag || null;
+    }
+
+    function selectFlag(code, flagEmoji) {
+      selectedFlag = code;
+      document.querySelectorAll('.flag-option').forEach(el => el.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    async function saveProfile() {
+      const name = document.getElementById('profileUsernameInput').value.trim();
+      
+      try {
+        const res = await fetch(`${API_URL}/users/profile`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            name: name || undefined,
+            avatar: currentAvatar,
+            flag: selectedFlag
+          })
+        });
+
+        if (res.ok) {
+          const updatedUser = await res.json();
+          currentUser = { ...currentUser, ...updatedUser };
+          showToast('Profile saved!');
+          loadProfile();
+        } else {
+          const data = await res.json();
+          showToast(data.error || 'Failed to save profile', true);
+        }
+      } catch (err) {
+        showToast('Connection error', true);
       }
     }
 
@@ -1420,6 +2758,9 @@
       localStorage.removeItem('cart');
       updateAuthUI();
       updateCartUI();
+      document.getElementById('sidebar').classList.remove('active');
+      document.getElementById('sidebarToggle').style.display = 'none';
+      document.querySelector('main').classList.remove('main-with-sidebar');
       showSection('hero');
       showToast('Logged out');
     }
@@ -1428,6 +2769,31 @@
       const authLinks = document.getElementById('authLinks');
       const userLinks = document.getElementById('userLinks');
       const adminLink = document.getElementById('adminLink');
+      const sidebar = document.getElementById('sidebar');
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const main = document.querySelector('main');
+
+      if (currentUser) {
+        authLinks.style.display = 'none';
+        userLinks.style.display = 'block';
+        document.getElementById('userName').textContent = currentUser.name;
+        document.getElementById('adminBadge').style.display = currentUser.isAdmin ? 'inline' : 'none';
+        adminLink.style.display = currentUser.isAdmin ? 'block' : 'none';
+        
+        // Show sidebar for logged in users
+        sidebarToggle.style.display = 'flex';
+        main.classList.add('main-with-sidebar');
+      } else {
+        authLinks.style.display = 'block';
+        userLinks.style.display = 'none';
+        adminLink.style.display = 'none';
+        
+        // Hide sidebar for logged out users
+        sidebar.classList.remove('active');
+        sidebarToggle.style.display = 'none';
+        main.classList.remove('main-with-sidebar');
+      }
+    }
 
       if (currentUser) {
         authLinks.style.display = 'none';
@@ -1612,7 +2978,7 @@
       const container = document.getElementById('reviewsList');
       
       if (reviews.length === 0) {
-        container.innerHTML = '<p class="no-reviews">No reviews yet. Be the first to review!</p>';
+        container.innerHTML = `<p class="no-reviews">${t('noReviews')}</p>`;
         return;
       }
 
@@ -1626,8 +2992,69 @@
             <div class="review-stars">${getStarString(r.rating)}</div>
           </div>
           <p>${r.review}</p>
+          ${currentUser && (currentUser.id === r.userId || currentUser.isAdmin) ? `
+            <div class="review-card-actions">
+              <button class="btn btn-secondary" onclick="editReview(${r.id}, ${r.rating}, '${r.review.replace(/'/g, "\\'")}')">${t('edit')}</button>
+              <button class="btn btn-danger" onclick="deleteReview(${r.id})">${t('delete')}</button>
+            </div>
+          ` : ''}
         </div>
       `).join('');
+    }
+
+    async function editReview(reviewId, rating, reviewText) {
+      const newRating = prompt('Edit Rating (1-5):', rating);
+      if (newRating === null) return;
+      
+      const newText = prompt('Edit Review:', reviewText);
+      if (newText === null) return;
+
+      try {
+        const res = await fetch(`${API_URL}/reviews/${reviewId}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            rating: parseInt(newRating),
+            review: newText
+          })
+        });
+
+        if (res.ok) {
+          showToast('Review updated!');
+          loadProductReviews(currentProductId);
+        } else {
+          const data = await res.json();
+          showToast(data.error || 'Failed to update review', true);
+        }
+      } catch (err) {
+        showToast('Connection error', true);
+      }
+    }
+
+    async function deleteReview(reviewId) {
+      if (!confirm(t('confirmDelete'))) return;
+
+      try {
+        const res = await fetch(`${API_URL}/reviews/${reviewId}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (res.ok) {
+          showToast('Review deleted');
+          loadProductReviews(currentProductId);
+        } else {
+          const data = await res.json();
+          showToast(data.error || 'Failed to delete', true);
+        }
+      } catch (err) {
+        showToast('Connection error', true);
+      }
     }
 
     // Cart

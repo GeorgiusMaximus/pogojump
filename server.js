@@ -114,7 +114,7 @@ app.post('/api/auth/register', async (req, res) => {
 
     res.json({
       token,
-      user: { id: user.id, email: user.email, name: user.name, isAdmin: user.isAdmin }
+      user: { id: user.id, email: user.email, name: user.name, isAdmin: user.isAdmin, avatar: user.avatar || null, flag: user.flag || null }
     });
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
@@ -150,7 +150,7 @@ app.post('/api/auth/login', async (req, res) => {
 
     res.json({
       token,
-      user: { id: user.id, email: user.email, name: user.name, isAdmin: user.isAdmin }
+      user: { id: user.id, email: user.email, name: user.name, isAdmin: user.isAdmin, avatar: user.avatar || null, flag: user.flag || null }
     });
   } catch (err) {
     res.status(500).json({ error: 'Server error' });
@@ -170,7 +170,9 @@ app.get('/api/auth/me', authMiddleware, (req, res) => {
     id: user.id,
     email: user.email,
     name: user.name,
-    isAdmin: user.isAdmin
+    isAdmin: user.isAdmin,
+    avatar: user.avatar || null,
+    flag: user.flag || null
   });
 });
 
@@ -327,6 +329,40 @@ app.delete('/api/reviews/:id', authMiddleware, (req, res) => {
   res.json({ message: 'Review deleted' });
 });
 
+// Update review (owner or admin)
+app.put('/api/reviews/:id', authMiddleware, (req, res) => {
+  const db = readDB();
+  const reviewId = parseInt(req.params.id);
+  const index = db.reviews.findIndex(r => r.id === reviewId);
+
+  if (index === -1) {
+    return res.status(404).json({ error: 'Review not found' });
+  }
+
+  const review = db.reviews[index];
+
+  if (review.userId !== req.user.id && !req.user.isAdmin) {
+    return res.status(403).json({ error: 'You can only edit your own reviews' });
+  }
+
+  const { rating, review: reviewText } = req.body;
+
+  if (rating && (rating < 1 || rating > 5)) {
+    return res.status(400).json({ error: 'Rating must be between 1 and 5' });
+  }
+
+  db.reviews[index] = {
+    ...review,
+    rating: rating ? parseInt(rating) : review.rating,
+    review: reviewText !== undefined ? reviewText : review.review,
+    updatedAt: new Date().toISOString()
+  };
+
+  writeDB(db);
+
+  res.json(db.reviews[index]);
+});
+
 // Get product with reviews
 app.get('/api/products/:id/with-reviews', (req, res) => {
   const db = readDB();
@@ -434,9 +470,49 @@ app.get('/api/users', authMiddleware, adminMiddleware, (req, res) => {
     email: u.email,
     name: u.name,
     isAdmin: u.isAdmin,
-    createdAt: u.createdAt
+    createdAt: u.createdAt,
+    avatar: u.avatar || null,
+    flag: u.flag || null
   }));
   res.json(users);
+});
+
+// Update user profile (owner)
+app.put('/api/users/profile', authMiddleware, (req, res) => {
+  const db = readDB();
+  const index = db.users.findIndex(u => u.id === req.user.id);
+
+  if (index === -1) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+
+  const { name, avatar, flag } = req.body;
+
+  if (name !== undefined) {
+    if (name.trim().length < 2) {
+      return res.status(400).json({ error: 'Name must be at least 2 characters' });
+    }
+    db.users[index].name = name.trim();
+  }
+
+  if (avatar !== undefined) {
+    db.users[index].avatar = avatar;
+  }
+
+  if (flag !== undefined) {
+    db.users[index].flag = flag;
+  }
+
+  writeDB(db);
+
+  res.json({
+    id: db.users[index].id,
+    email: db.users[index].email,
+    name: db.users[index].name,
+    isAdmin: db.users[index].isAdmin,
+    avatar: db.users[index].avatar,
+    flag: db.users[index].flag
+  });
 });
 
 // Initialize database and start server
