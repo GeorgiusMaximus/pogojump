@@ -1100,7 +1100,10 @@
       token = null;
       currentUser = null;
       localStorage.removeItem('token');
+      cart = [];
+      localStorage.removeItem('cart');
       updateAuthUI();
+      updateCartUI();
       showSection('hero');
       showToast('Logged out');
     }
