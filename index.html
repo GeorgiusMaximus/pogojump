@@ -1483,42 +1483,12 @@
     </div>
   </nav>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-section-title">Menu</div>
-      <div class="sidebar-item" onclick="showSection('settings')" data-section="settings">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-        </svg>
-        <span data-i18n="settings">Settings</span>
-      </div>
-      <div class="sidebar-item" onclick="showSection('profile')" data-section="profile">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-          <circle cx="12" cy="7" r="4"/>
-        </svg>
-        <span data-i18n="profile">My Profile</span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Sidebar Toggle Button -->
-  <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="3" y1="12" x2="21" y2="12"/>
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  </button>
-
   <!-- Main Content -->
   <main>
     <!-- Hero Section -->
     <section id="hero" class="section active">
       <div class="hero">
-        <h1>Jump Into the<br><span class="highlight">Future of Fun</span></h1>
+        <h1 data-i18n="jumpIntoFuture">Jump Into the</h1>
         <p>Experience the ultimate bouncing sensation with our premium neon pogo sticks. Built for thrill-seekers of all ages.</p>
         <div class="hero-btns">
           <button class="btn btn-primary" onclick="showSection('products')">Explore Models</button>
@@ -1784,6 +1754,36 @@
       </div>
     </section>
 
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-section-title>Menu</div>
+        <div class="sidebar-item" onclick="showSection('settings')" data-section="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          <span data-i18n="settings">Settings</span>
+        </div>
+        <div class="sidebar-item" onclick="showSection('profile')" data-section="profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span data-i18n="profile">My Profile</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
     <!-- Cart Section -->
     <section id="cart" class="section">
       <div class="container">
@@ -1791,7 +1791,7 @@
           <h2>Your <span class="accent">Cart</span></h2>
         </div>
         <div class="cart-summary" id="cartContent">
-          <div class="empty-cart">Your cart is empty</div>
+<div class="empty-cart" data-i18n="cartEmpty">Your cart is empty</div>
         </div>
       </div>
     </section>
@@ -1942,7 +1942,7 @@
   <!-- Toast -->
   <div class="toast" id="toast"></div>
 
-  <script>
+<script>
     const API_URL = 'http://localhost:3000/api';
     let currentUser = null;
     let token = localStorage.getItem('token');
@@ -1951,438 +1951,46 @@
     let currentLanguage = localStorage.getItem('language') || 'en';
     let currentTheme = localStorage.getItem('theme') || 'dark';
     let themePreset = localStorage.getItem('themePreset') || 'default';
+    let currentProductId = null;
+    let selectedRating = 0;
+    let currentAvatar = { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' };
+    let selectedFlag = null;
 
-    // Translations
     const translations = {
-      en: {
-        home: 'Home',
-        products: 'Products',
-        cart: 'Cart',
-        login: 'Login',
-        register: 'Register',
-        logout: 'Logout',
-        admin: 'Admin',
-        dashboard: 'Dashboard',
-        settings: 'Settings',
-        profile: 'MyProfile',
-        exploreModels: 'Explore Models',
-        signIn: 'Sign In',
-        learnMore: 'Learn More',
-        findPerfect: 'Find the perfect pogo stick for your adventure',
-        ourModels: 'Our Models',
-        whyPogojump: 'Why PogoJump',
-        about: 'About',
-        contact: 'Contact',
-        getInTouch: 'Get in Touch',
-        readyToJump: 'Ready to jump? Send us a message!',
-        yourName: 'Your Name',
-        emailAddress: 'Email Address',
-        yourMessage: 'Your Message',
-        sendMessage: 'Send Message',
-        welcomeBack: 'Welcome Back',
-        createAccount: 'Create Account',
-        dontHaveAccount: "Don't have an account?",
-        alreadyHaveAccount: 'Already have an account?',
-        addToCart: 'Add to Cart',
-        details: 'Details',
-        customerReviews: 'Customer Reviews',
-        writeReview: 'Write a Review',
-        yourRating: 'Your Rating',
-        submitReview: 'Submit Review',
-        loginToReview: 'Please login to leave a review',
-        noReviews: 'No reviews yet. Be the first to review!',
-        reviews: 'reviews',
-        backToProducts: 'Back to Products',
-        featured: 'Featured',
-        adminDashboard: 'Admin Dashboard',
-        addProduct: '+ Add Product',
-        orders: 'Orders',
-        users: 'Users',
-        language: 'Language',
-        theme: 'Theme',
-        darkMode: 'Dark Mode',
-        lightMode: 'Light Mode',
-        inverted: 'Inverted',
-        preset: 'Preset',
-        ocean: 'Ocean',
-        forest: 'Forest',
-        sunset: 'Sunset',
-        minimal: 'Minimal',
-        username: 'Username',
-        changeUsername: 'Change Username',
-        countryFlag: 'Country Flag',
-        selectFlag: 'Select Flag',
-        createAvatar: 'Create Avatar',
-        body: 'Body',
-        eyes: 'Eyes',
-        color: 'Color',
-        accessory: 'Accessory',
-        mouth: 'Mouth',
-        saveProfile: 'Save Profile',
-        edit: 'Edit',
-        delete: 'Delete',
-        cancel: 'Cancel',
-        save: 'Save',
-        editReview: 'Edit Review',
-        deleteReview: 'Delete Review',
-        confirmDelete: 'Are you sure you want to delete this review?',
-        superioBounce: 'Superior Bounce',
-        builtToLast: 'Built to Last',
-        funForAllAges: 'Fun for All Ages',
-        energyReturn: 'Energy Return',
-        superiorBounceDesc: 'Advanced spring technology delivers unmatched bounce height and responsiveness',
-        builtToLastDesc: 'Premium materials and rigorous testing ensure years of reliable use',
-        funForAllAgesDesc: 'Multiple models designed for children, teens, and adults alike',
-        energyReturnDesc: 'Smart engineering maximizes energy return with every jump',
-        pogojumpNeon: 'Beginner-friendly with vibrant LED lights',
-        pogojumpPro: 'Professional grade with higher bounce',
-        pogojumpJunior: 'For kids with extra safety features',
-        pogojumpCarbon: 'Ultra-light carbon fiber design',
-        pogojumpExtreme: 'Maximum height with advanced springs',
-        happyJumpers: 'Happy Jumpers',
-        premiumModels: 'Premium Models',
-        yearsOfExcellence: 'Years of Excellence',
-        redefininFun: 'Redefining fun since 2018',
-        atPogojump: 'At PogoJump, we believe in the power of simple joy.',
-        yourCart: 'Your Cart',
-        placeOrder: 'Place Order',
-        total: 'Total'
-      },
-      de: {
-        home: 'Startseite',
-        products: 'Produkte',
-        cart: 'Warenkorb',
-        login: 'Anmelden',
-        register: 'Registrieren',
-        logout: 'Abmelden',
-        admin: 'Admin',
-        dashboard: 'Dashboard',
-        settings: 'Einstellungen',
-        profile: 'Mein Profil',
-        exploreModels: 'Modelle entdecken',
-        signIn: 'Anmelden',
-        learnMore: 'Mehr erfahren',
-        findPerfect: 'Finde den perfekten Pogo-Stick für dein Abenteuer',
-        ourModels: 'Unsere Modelle',
-        whyPogojump: 'Warum PogoJump',
-        about: 'Über uns',
-        contact: 'Kontakt',
-        getInTouch: 'Kontaktiere uns',
-        readyToJump: 'Bereit zum Hüpfen? Schreib uns eine Nachricht!',
-        yourName: 'Dein Name',
-        emailAddress: 'E-Mail-Adresse',
-        yourMessage: 'Deine Nachricht',
-        sendMessage: 'Nachricht senden',
-        welcomeBack: 'Willkommen zurück',
-        createAccount: 'Konto erstellen',
-        dontHaveAccount: 'Noch kein Konto?',
-        alreadyHaveAccount: 'Bereits ein Konto?',
-        addToCart: 'In den Warenkorb',
-        details: 'Details',
-        customerReviews: 'Kundenbewertungen',
-        writeReview: 'Bewertung schreiben',
-        yourRating: 'Deine Bewertung',
-        submitReview: 'Bewertung absenden',
-        loginToReview: 'Bitte melde dich an, um eine Bewertung zu schreiben',
-        noReviews: 'Noch keine Bewertungen. Sei der Erste!',
-        reviews: 'Bewertungen',
-        backToProducts: 'Zurück zu Produkten',
-        featured: 'Empfohlen',
-        adminDashboard: 'Admin-Dashboard',
-        addProduct: '+ Produkt hinzufügen',
-        orders: 'Bestellungen',
-        users: 'Benutzer',
-        language: 'Sprache',
-        theme: 'Design',
-        darkMode: 'Dunkelmodus',
-        lightMode: 'Hellmodus',
-        inverted: 'Invertiert',
-        preset: 'Vorlage',
-        ocean: 'Ozean',
-        forest: 'Wald',
-        sunset: 'Sonnenuntergang',
-        minimal: 'Minimal',
-        username: 'Benutzername',
-        changeUsername: 'Benutzername ändern',
-        countryFlag: 'Land',
-        selectFlag: 'Flagge auswählen',
-        createAvatar: 'Avatar erstellen',
-        body: 'Körper',
-        eyes: 'Augen',
-        color: 'Farbe',
-        accessory: 'Zubehör',
-        mouth: 'Mund',
-        saveProfile: 'Profil speichern',
-        edit: 'Bearbeiten',
-        delete: 'Löschen',
-        cancel: 'Abbrechen',
-        save: 'Speichern',
-        editReview: 'Bewertung bearbeiten',
-        deleteReview: 'Bewertung löschen',
-        confirmDelete: 'Möchtest du diese Bewertung wirklich löschen?',
-        superioBounce: 'Super Sprungkraft',
-        builtToLast: 'Langlebig',
-        funForAllAges: 'Für alle Altersgruppen',
-        energyReturn: 'Energierückgewinnung',
-        superiorBounceDesc: 'Fortschrittliche Federungstechnologie für unübertroffene Sprunghöhe',
-        builtToLastDesc: 'Hochwertige Materialien und strenge Tests sorgen für jahrelange Nutzung',
-        funForAllAgesDesc: 'Mehrere Modelle für Kinder, Teenager und Erwachsene',
-        energyReturnDesc: 'Intelligente Technik maximiert die Energierückgewinnung bei jedem Sprung',
-        pogojumpNeon: 'Anfängerfreundlich mit leuchtenden LED-Lichtern',
-        pogojumpPro: 'Professionelle Qualität mit höherem Sprung',
-        pogojumpJunior: 'Für Kinder mit extra Sicherheitsfunktionen',
-        pogojumpCarbon: 'Ultraleichtes Carbon-Design',
-        pogojumpExtreme: 'Maximale Höhe mit fortschrittlichen Federn',
-        happyJumpers: 'Zufriedene Springer',
-        premiumModels: 'Premium-Modelle',
-        yearsOfExcellence: 'Jahre Erfahrung',
-        redefininFun: 'Spaß neu definieren seit 2018',
-        atPogojump: 'Bei PogoJump glauben wir an die Kraft einfacher Freude.',
-        yourCart: 'Dein Warenkorb',
-        placeOrder: 'Bestellung aufgeben',
-        total: 'Gesamt'
-      },
-      ru: {
-        home: 'Главная',
-        products: 'Товары',
-        cart: 'Корзина',
-        login: 'Войти',
-        register: 'Регистрация',
-        logout: 'Выйти',
-        admin: 'Админ',
-        dashboard: 'Панель',
-        settings: 'Настройки',
-        profile: 'Мой профиль',
-        exploreModels: 'Смотреть модели',
-        signIn: 'Войти',
-        learnMore: 'Узнать больше',
-        findPerfect: 'Найди идеальный пого-стик для своего приключения',
-        ourModels: 'Наши модели',
-        whyPogojump: 'Почему PogoJump',
-        about: 'О нас',
-        contact: 'Контакты',
-        getInTouch: 'Связаться',
-        readyToJump: 'Готов прыгать? Напиши нам!',
-        yourName: 'Ваше имя',
-        emailAddress: 'Email',
-        yourMessage: 'Ваше сообщение',
-        sendMessage: 'Отправить',
-        welcomeBack: 'С возвращением',
-        createAccount: 'Создать аккаунт',
-        dontHaveAccount: 'Нет аккаунта?',
-        alreadyHaveAccount: 'Уже есть аккаунт?',
-        addToCart: 'В корзину',
-        details: 'Подробнее',
-        customerReviews: 'Отзывы',
-        writeReview: 'Написать отзыв',
-        yourRating: 'Ваша оценка',
-        submitReview: 'Отправить отзыв',
-        loginToReview: 'Войдите, чтобы оставить отзыв',
-        noReviews: 'Пока нет отзывов. Будьте первым!',
-        reviews: 'отзывов',
-        backToProducts: 'К товарам',
-        featured: 'Рекомендуем',
-        adminDashboard: 'Панель админа',
-        addProduct: '+ Добавить товар',
-        orders: 'Заказы',
-        users: 'Пользователи',
-        language: 'Язык',
-        theme: 'Тема',
-        darkMode: 'Тёмный режим',
-        lightMode: 'Светлый режим',
-        inverted: 'Инвертированный',
-        preset: 'Пресет',
-        ocean: 'Океан',
-        forest: 'Лес',
-        sunset: 'Закат',
-        minimal: 'Минимальный',
-        username: 'Имя пользователя',
-        changeUsername: 'Изменить имя',
-        countryFlag: 'Страна',
-        selectFlag: 'Выбрать флаг',
-        createAvatar: 'Создать аватар',
-        body: 'Тело',
-        eyes: 'Глаза',
-        color: 'Цвет',
-        accessory: 'Аксессуар',
-        mouth: 'Рот',
-        saveProfile: 'Сохранить',
-        edit: 'Изменить',
-        delete: 'Удалить',
-        cancel: 'Отмена',
-        save: 'Сохранить',
-        editReview: 'Редактировать отзыв',
-        deleteReview: 'Удалить отзыв',
-        confirmDelete: 'Вы уверены, что хотите удалить этот отзыв?',
-        superioBounce: 'Мощный прыжок',
-        builtToLast: 'Надёжность',
-        funForAllAges: 'Для всех возрастов',
-        energyReturn: 'Возврат энергии',
-        superiorBounceDesc: 'Продвинутая пружинная технология для максимальной высоты прыжка',
-        builtToLastDesc: 'Премиальные материалы и строгие тесты для долгой службы',
-        funForAllAgesDesc: 'Модели для детей, подростков и взрослых',
-        energyReturnDesc: 'Умная инженерия максимизирует возврат энергии при каждом прыжке',
-        pogojumpNeon: 'Для начинающих с яркими LED огнями',
-        pogojumpPro: 'Профессиональное качество с большим отскоком',
-        pogojumpJunior: 'Для детей с дополнительной защитой',
-        pogojumpCarbon: 'Сверхлёгкий карбон',
-        pogojumpExtreme: 'Максимальная высота с продвинутыми пружинами',
-        happyJumpers: 'Довольных прыгунов',
-        premiumModels: 'Премиум моделей',
-        yearsOfExcellence: 'Лет опыта',
-        redefininFun: 'Переосмысливаем веселье с 2018',
-        atPogojump: 'В PogoJump мы верим в силу простой радости.',
-        yourCart: 'Ваша корзина',
-        placeOrder: 'Оформить заказ',
-        total: 'Итого'
-      },
-      es: {
-        home: 'Inicio',
-        products: 'Productos',
-        cart: 'Carrito',
-        login: 'Iniciar sesión',
-        register: 'Registrarse',
-        logout: 'Cerrar sesión',
-        admin: 'Admin',
-        dashboard: 'Panel',
-        settings: 'Ajustes',
-        profile: 'Mi perfil',
-        exploreModels: 'Explorar modelos',
-        signIn: 'Iniciar sesión',
-        learnMore: 'Más información',
-        findPerfect: 'Encuentra el pogo stick perfecto para tu aventura',
-        ourModels: 'Nuestros modelos',
-        whyPogojump: 'Por qué PogoJump',
-        about: 'Acerca de',
-        contact: 'Contacto',
-        getInTouch: 'Contáctanos',
-        readyToJump: '¿Listo para saltar? ¡Escríbenos!',
-        yourName: 'Tu nombre',
-        emailAddress: 'Correo electrónico',
-        yourMessage: 'Tu mensaje',
-        sendMessage: 'Enviar mensaje',
-        welcomeBack: 'Bienvenido de nuevo',
-        createAccount: 'Crear cuenta',
-        dontHaveAccount: '¿No tienes cuenta?',
-        alreadyHaveAccount: '¿Ya tienes cuenta?',
-        addToCart: 'Añadir al carrito',
-        details: 'Detalles',
-        customerReviews: 'Reseñas de clientes',
-        writeReview: 'Escribir reseña',
-        yourRating: 'Tu puntuación',
-        submitReview: 'Enviar reseña',
-        loginToReview: 'Inicia sesión para dejar una reseña',
-        noReviews: 'Aún no hay reseñas. ¡Sé el primero!',
-        reviews: 'reseñas',
-        backToProducts: 'Volver a productos',
-        featured: 'Destacado',
-        adminDashboard: 'Panel de admin',
-        addProduct: '+ Añadir producto',
-        orders: 'Pedidos',
-        users: 'Usuarios',
-        language: 'Idioma',
-        theme: 'Tema',
-        darkMode: 'Modo oscuro',
-        lightMode: 'Modo claro',
-        inverted: 'Invertido',
-        preset: 'Preset',
-        ocean: 'Océano',
-        forest: 'Bosque',
-        sunset: 'Atardecer',
-        minimal: 'Minimal',
-        username: 'Nombre de usuario',
-        changeUsername: 'Cambiar nombre',
-        countryFlag: 'País',
-        selectFlag: 'Seleccionar bandera',
-        createAvatar: 'Crear avatar',
-        body: 'Cuerpo',
-        eyes: 'Ojos',
-        color: 'Color',
-        accessory: 'Accesorio',
-        mouth: 'Boca',
-        saveProfile: 'Guardar perfil',
-        edit: 'Editar',
-        delete: 'Eliminar',
-        cancel: 'Cancelar',
-        save: 'Guardar',
-        editReview: 'Editar reseña',
-        deleteReview: 'Eliminar reseña',
-        confirmDelete: '¿Estás seguro de que quieres eliminar esta reseña?',
-        superioBounce: 'Salto superior',
-        builtToLast: 'Durabilidad',
-        funForAllAges: 'Diversión para todos',
-        energyReturn: 'Retorno de energía',
-        superiorBounceDesc: 'Tecnología de resorte avanzada para un salto sin igual',
-        builtToLastDesc: 'Materiales premium y pruebas rigurosas',
-        funForAllAgesDesc: 'Múltiples modelos para niños, adolescentes y adultos',
-        energyReturnDesc: 'Ingeniería inteligente maximiza el retorno de energía',
-        pogojumpNeon: 'Para principiantes con luces LED brillantes',
-        pogojumpPro: 'Calidad profesional con mayor rebote',
-        pogojumpJunior: 'Para niños con características de seguridad extra',
-        pogojumpCarbon: 'Diseño ultraligero de carbono',
-        pogojumpExtreme: 'Altura máxima con resortes avanzados',
-        happyJumpers: 'Saltadores felices',
-        premiumModels: 'Modelos premium',
-        yearsOfExcellence: 'Años de experiencia',
-        redefininFun: 'Redefiniendo la diversión desde 2018',
-        atPogojump: 'En PogoJump creemos en el poder de la alegría simple.',
-        yourCart: 'Tu carrito',
-        placeOrder: 'Realizar pedido',
-        total: 'Total'
-      }
+      en: { home: 'Home', products: 'Products', cart: 'Cart', login: 'Login', register: 'Register', logout: 'Logout', admin: 'Admin', dashboard: 'Dashboard', settings: 'Settings', profile: 'My Profile', exploreModels: 'Explore Models', signIn: 'Sign In', learnMore: 'Learn More', findPerfect: 'Find the perfect pogo stick for your adventure', ourModels: 'Our Models', whyPogojump: 'Why PogoJump', about: 'About', contact: 'Contact', getInTouch: 'Get in Touch', readyToJump: 'Ready to jump? Send us a message!', yourName: 'Your Name', emailAddress: 'Email Address', yourMessage: 'Your Message', sendMessage: 'Send Message', welcomeBack: 'Welcome Back', createAccount: 'Create Account', dontHaveAccount: "Don't have an account?", alreadyHaveAccount: 'Already have an account?', addToCart: 'Add to Cart', details: 'Details', customerReviews: 'Customer Reviews', writeReview: 'Write a Review', yourRating: 'Your Rating', submitReview: 'Submit Review', loginToReview: 'Please login to leave a review', noReviews: 'No reviews yet. Be the first to review!', reviews: 'reviews', backToProducts: 'Back to Products', featured: 'Featured', adminDashboard: 'Admin Dashboard', addProduct: '+ Add Product', orders: 'Orders', users: 'Users', language: 'Language', theme: 'Theme', darkMode: 'Dark Mode', lightMode: 'Light Mode', inverted: 'Inverted', preset: 'Preset', ocean: 'Ocean', forest: 'Forest', sunset: 'Sunset', minimal: 'Minimal', username: 'Username', changeUsername: 'Change Username', countryFlag: 'Country Flag', selectFlag: 'Select Flag', createAvatar: 'Create Avatar', body: 'Body', eyes: 'Eyes', color: 'Color', accessory: 'Accessory', mouth: 'Mouth', saveProfile: 'Save Profile', edit: 'Edit', delete: 'Delete', cancel: 'Cancel', save: 'Save', editReview: 'Edit Review', deleteReview: 'Delete Review', confirmDelete: 'Are you sure you want to delete this review?', placeOrder: 'Place Order', remove: 'Remove', total: 'Total', connectionError: 'Connection error', languageChanged: 'Language changed', profileSaved: 'Profile saved!', welcomeBackMsg: 'Welcome back!', accountCreated: 'Account created!', loggedOut: 'Logged out', addedToCart: 'Added to cart!', cartEmpty: 'Your cart is empty', pleaseLogin: 'Please login', orderPlaced: 'Order placed!', reviewSubmitted: 'Review submitted!', selectRating: 'Select rating', writeReviewMsg: 'Write review', reviewUpdated: 'Review updated!', reviewDeleted: 'Review deleted', adminRequired: 'Admin required', productSaved: 'Product saved!', failedToSave: 'Failed to save', deleteProductConfirm: 'Delete this product?', productDeleted: 'Product deleted', orderUpdated: 'Order updated', deleteOrderConfirm: 'Delete this order?', orderDeleted: 'Order deleted', failedToDelete: 'Failed to delete', failedToSaveProduct: 'Failed to save product', pleaseSelectRating: 'Please select a rating', pleaseWriteReview: 'Please write a review', pleaseLoginOrder: 'Please login to place an order', orderPlacedSuccessfully: 'Order placed successfully!', failedToPlaceOrder: 'Failed to place order', adminAccessRequired: 'Admin access required', failed: 'Failed', editProduct: 'Edit Product', addProductTitle: 'Add Product', productName: 'Product Name', productDescription: 'Description', productPrice: 'Price', productImage: 'Image', productFeaturedLabel: 'Featured', saveProductBtn: 'Save Product', updateOrder: 'Update Order', orderStatus: 'Status', pending: 'Pending', processing: 'Processing', completed: 'Completed', cancelled: 'Cancelled', id: 'ID', name: 'Name', email: 'Email', date: 'Date', actions: 'Actions', status: 'Status', items: 'Items', standard: 'Standard', jumpIntoFuture: 'Jump Into the', futureOfFun: 'Future of Fun', experienceUltimate: 'Experience the ultimate bouncing sensation with our premium neon pogo sticks. Built for thrill-seekers of all ages.', superiorBounce: 'Superior Bounce', superiorBounceDesc: 'Advanced spring technology delivers unmatched bounce height and responsiveness', builtToLast: 'Built to Last', builtToLastDesc: 'Premium materials and rigorous testing ensure years of reliable use', funForAllAges: 'Fun for All Ages', funForAllAgesDesc: 'Multiple models designed for children, teens, and adults alike', energyReturn: 'Energy Return', energyReturnDesc: 'Smart engineering maximizes energy return with every jump', pogojumpNeon: 'Neon Pro', pogojumpNeonDesc: 'Professional grade with higher bounce', pogojumpJunior: 'Junior', pogojumpJuniorDesc: 'For kids with extra safety features', pogojumpCarbon: 'Carbon Elite', pogojumpCarbonDesc: 'Ultra-light carbon fiber construction', pogojumpExtreme: 'Extreme', pogojumpExtremeDesc: 'Maximum height with advanced springs', yearsOfExcellence: 'Years of Excellence', redefininFun: 'Redefining fun since 2018', footerText: '© 2026 PogoJump. All rights reserved.', reviewPlaceholder: 'Share your experience...' },
+      de: { home: 'Startseite', products: 'Produkte', cart: 'Warenkorb', login: 'Anmelden', register: 'Registrieren', logout: 'Abmelden', admin: 'Admin', dashboard: 'Dashboard', settings: 'Einstellungen', profile: 'Mein Profil', exploreModels: 'Modelle entdecken', signIn: 'Anmelden', learnMore: 'Mehr erfahren', findPerfect: 'Finde den perfekten Pogo-Stick', ourModels: 'Unsere Modelle', whyPogojump: 'Warum PogoJump', about: 'Über uns', contact: 'Kontakt', getInTouch: 'Kontaktiere uns', readyToJump: 'Bereit zum Hüpfen?', yourName: 'Dein Name', emailAddress: 'E-Mail', yourMessage: 'Nachricht', sendMessage: 'Senden', welcomeBack: 'Willkommen', createAccount: 'Konto erstellen', dontHaveAccount: 'Kein Konto?', alreadyHaveAccount: 'Konto vorhanden?', addToCart: 'In den Warenkorb', details: 'Details', customerReviews: 'Bewertungen', writeReview: 'Bewertung schreiben', yourRating: 'Bewertung', submitReview: 'Absenden', loginToReview: 'Anmelden zum Bewerten', noReviews: 'Noch keine Bewertungen', reviews: 'Bewertungen', backToProducts: 'Zurück', featured: 'Empfohlen', adminDashboard: 'Admin', addProduct: '+ Produkt', orders: 'Bestellungen', users: 'Benutzer', language: 'Sprache', theme: 'Design', darkMode: 'Dunkel', lightMode: 'Hell', inverted: 'Invertiert', preset: 'Vorlage', ocean: 'Ozean', forest: 'Wald', sunset: 'Sonnenuntergang', minimal: 'Minimal', username: 'Benutzername', changeUsername: 'Name ändern', countryFlag: 'Land', selectFlag: 'Flagge', createAvatar: 'Avatar', body: 'Körper', eyes: 'Augen', color: 'Farbe', accessory: 'Zubehör', mouth: 'Mund', saveProfile: 'Speichern', edit: 'Bearbeiten', delete: 'Löschen', cancel: 'Abbrechen', save: 'Speichern', editReview: 'Bearbeiten', deleteReview: 'Löschen', confirmDelete: 'Möchtest du diese Bewertung wirklich löschen?', placeOrder: 'Bestellung aufgeben', remove: 'Entfernen', total: 'Gesamt', connectionError: 'Verbindungsfehler', languageChanged: 'Sprache geändert', profileSaved: 'Profil gespeichert!', welcomeBackMsg: 'Willkommen zurück!', accountCreated: 'Konto erstellt!', loggedOut: 'Abgemeldet', addedToCart: 'In den Warenkorb!', cartEmpty: 'Warenkorb ist leer', pleaseLogin: 'Bitte anmelden', orderPlaced: 'Bestellung aufgegeben!', reviewSubmitted: 'Bewertung gesendet!', selectRating: 'Bewertung wählen', writeReviewMsg: 'Bewertung schreiben', reviewUpdated: 'Bewertung aktualisiert!', reviewDeleted: 'Bewertung gelöscht', adminRequired: 'Admin erforderlich', productSaved: 'Produkt gespeichert!', failedToSave: 'Speichern fehlgeschlagen', deleteProductConfirm: 'Dieses Produkt löschen?', productDeleted: 'Produkt gelöscht', orderUpdated: 'Bestellung aktualisiert', deleteOrderConfirm: 'Diese Bestellung löschen?', orderDeleted: 'Bestellung gelöscht', failed: 'Fehlgeschlagen', editProduct: 'Produkt bearbeiten', addProductTitle: 'Produkt hinzufügen', productName: 'Produktname', productDescription: 'Beschreibung', productPrice: 'Preis', productImage: 'Bild', productFeaturedLabel: 'Empfohlen', saveProductBtn: 'Speichern', updateOrder: 'Bestellung aktualisieren', orderStatus: 'Status', pending: 'Ausstehend', processing: 'In Bearbeitung', completed: 'Abgeschlossen', cancelled: 'Storniert', id: 'ID', name: 'Name', email: 'E-Mail', date: 'Datum', actions: 'Aktionen', status: 'Status', items: 'Artikel', standard: 'Standard', jumpIntoFuture: 'Spring in die', futureOfFun: 'Zukunft des Spaßes', experienceUltimate: 'Erlebe das ultimative Hüpfvergnügen mit unseren Premium-Neon-Pogo-Sticks. Für alle Altersgruppen.', superiorBounce: 'Super Sprung', superiorBounceDesc: 'Fortschrittliche Federungstechnologie für unübertroffene Sprunghöhe', builtToLast: 'Langlebig', builtToLastDesc: 'Hochwertige Materialien und strenge Tests sorgen für jahrelange Nutzung', funForAllAges: 'Für alle', funForAllAgesDesc: 'Mehrere Modelle für Kinder, Teenager und Erwachsene', energyReturn: 'Energie', energyReturnDesc: 'Intelligente Technik maximiert die Energierückgewinnung', pogojumpNeon: 'Neon Pro', pogojumpNeonDesc: 'Profi-Qualität mit höherem Sprung', pogojumpJunior: 'Junior', pogojumpJuniorDesc: 'Für Kinder mit Extrsicherheit', pogojumpCarbon: 'Carbon Elite', pogojumpCarbonDesc: 'Ultraleichte Carbonfaser-Konstruktion', pogojumpExtreme: 'Extreme', pogojumpExtremeDesc: 'Maximale Höhe mit fortschrittlichen Federn', yearsOfExcellence: 'Jahre Erfahrung', redefininFun: 'Spaß seit 2018', footerText: '© 2026 PogoJump. Alle Rechte vorbehalten.', reviewPlaceholder: 'Teile deine Erfahrung...' },
+      ru: { home: 'Главная', products: 'Товары', cart: 'Корзина', login: 'Войти', register: 'Регистрация', logout: 'Выйти', admin: 'Админ', dashboard: 'Панель', settings: 'Настройки', profile: 'Профиль', exploreModels: 'Смотреть', signIn: 'Войти', learnMore: 'Узнать', findPerfect: 'Найди пого-стик', ourModels: 'Модели', whyPogoJump: 'Почему PogoJump', about: 'О нас', contact: 'Контакты', getInTouch: 'Связаться', readyToJump: 'Готов?', yourName: 'Имя', emailAddress: 'Email', yourMessage: 'Сообщение', sendMessage: 'Отправить', welcomeBack: 'С возвращением', createAccount: 'Создать аккаунт', dontHaveAccount: 'Нет аккаунта?', alreadyHaveAccount: 'Есть аккаунт?', addToCart: 'В корзину', details: 'Подробнее', customerReviews: 'Отзывы', writeReview: 'Написать отзыв', yourRating: 'Оценка', submitReview: 'Отправить', loginToReview: 'Войдите для отзыва', noReviews: 'Пока нет отзывов', reviews: 'отзывов', backToProducts: 'К товарам', featured: 'Рекомендуем', adminDashboard: 'Админ', addProduct: '+ Товар', orders: 'Заказы', users: 'Пользователи', language: 'Язык', theme: 'Тема', darkMode: 'Тёмный', lightMode: 'Светлый', inverted: 'Инвертированный', preset: 'Пресет', ocean: 'Океан', forest: 'Лес', sunset: 'Закат', minimal: 'Минимальный', username: 'Имя', changeUsername: 'Изменить', countryFlag: 'Страна', selectFlag: 'Флаг', createAvatar: 'Аватар', body: 'Тело', eyes: 'Глаза', color: 'Цвет', accessory: 'Аксессуар', mouth: 'Рот', saveProfile: 'Сохранить', edit: 'Изменить', delete: 'Удалить', cancel: 'Отмена', save: 'Сохранить', editReview: 'Изменить', deleteReview: 'Удалить', confirmDelete: 'Удалить отзыв?', placeOrder: 'Оформить заказ', remove: 'Удалить', total: 'Итого', connectionError: 'Ошибка связи', languageChanged: 'Язык изменён', profileSaved: 'Профиль сохранён!', welcomeBackMsg: 'С возвращением!', accountCreated: 'Аккаунт создан!', loggedOut: 'Выход выполнен', addedToCart: 'Добавлено!', cartEmpty: 'Корзина пуста', pleaseLogin: 'Войдите', orderPlaced: 'Заказ оформлен!', reviewSubmitted: 'Отзыв отправлен!', selectRating: 'Выберите оценку', writeReviewMsg: 'Напишите отзыв', reviewUpdated: 'Отзыв обновлён!', reviewDeleted: 'Отзыв удалён', adminRequired: 'Нужен админ', productSaved: 'Товар сохранён!', failedToSave: 'Ошибка сохранения', deleteProductConfirm: 'Удалить товар?', productDeleted: 'Товар удалён', orderUpdated: 'Заказ обновлён', deleteOrderConfirm: 'Удалить заказ?', orderDeleted: 'Заказ удалён', failed: 'Ошибка', editProduct: 'Редактировать', addProductTitle: 'Добавить товар', productName: 'Название', productDescription: 'Описание', productPrice: 'Цена', productImage: 'Изображение', productFeaturedLabel: 'Рекомендуем', saveProductBtn: 'Сохранить', updateOrder: 'Обновить', orderStatus: 'Статус', pending: 'Ожидание', processing: 'В обработке', completed: 'Готов', cancelled: 'Отменён', id: 'ID', name: 'Имя', email: 'Email', date: 'Дата', actions: 'Действия', status: 'Статус', items: 'Товары', standard: 'Стандарт', jumpIntoFuture: 'Прыгай в', futureOfFun: 'Будущее веселья', experienceUltimate: 'Ощути максимум с нашими неоновыми пого-стиками. Для всех возрастов.', superiorBounce: 'Супер прыжок', superiorBounceDesc: 'Продвинутая пружина для максимальной высоты', builtToLast: 'Надёжность', builtToLastDesc: 'Качественные материалы обеспечивают долгий срок службы', funForAllAges: 'Для всех', funForAllAgesDesc: 'Модели для детей, подростков и взрослых', energyReturn: 'Энергия', energyReturnDesc: 'Умная конструкция максимизирует отскок', pogojumpNeon: 'Неон Про', pogojumpNeonDesc: 'Профессиональный с высоким прыжком', pogojumpJunior: 'Юниор', pogojumpJuniorDesc: 'Для детей с безопасностью', pogojumpCarbon: 'Карбон', pogojumpCarbonDesc: 'Лёгкое карбоновое исполнение', pogojumpExtreme: 'Экстрим', pogojumpExtremeDesc: 'Максимальная высота с продвинутыми пружинами', yearsOfExcellence: 'Лет опыта', redefininFun: 'Весело с 2018', footerText: '© 2026 PogoJump. Все права защищены.', reviewPlaceholder: 'Поделитесь опытом...' },
+      es: { home: 'Inicio', products: 'Productos', cart: 'Carrito', login: 'Iniciar sesión', register: 'Registrarse', logout: 'Cerrar sesión', admin: 'Admin', dashboard: 'Panel', settings: 'Ajustes', profile: 'Mi perfil', exploreModels: 'Explorar', signIn: 'Entrar', learnMore: 'Más info', findPerfect: 'Encuentra tu pogo', ourModels: 'Modelos', whyPogojump: 'Por qué', about: 'Acerca de', contact: 'Contacto', getInTouch: 'Contáctanos', readyToJump: '¿Listo?', yourName: 'Tu nombre', emailAddress: 'Email', yourMessage: 'Mensaje', sendMessage: 'Enviar', welcomeBack: 'Bienvenido', createAccount: 'Crear cuenta', dontHaveAccount: '¿Sin cuenta?', alreadyHaveAccount: '¿Con cuenta?', addToCart: 'Añadir', details: 'Detalles', customerReviews: 'Reseñas', writeReview: 'Escribir', yourRating: 'Puntuación', submitReview: 'Enviar', loginToReview: 'Inicia sesión', noReviews: 'Sin reseñas', reviews: 'reseñas', backToProducts: 'Volver', featured: 'Destacado', adminDashboard: 'Admin', addProduct: '+ Producto', orders: 'Pedidos', users: 'Usuarios', language: 'Idioma', theme: 'Tema', darkMode: 'Oscuro', lightMode: 'Claro', inverted: 'Invertido', preset: 'Preset', ocean: 'Océano', forest: 'Bosque', sunset: 'Atardecer', minimal: 'Minimal', username: 'Usuario', changeUsername: 'Cambiar', countryFlag: 'País', selectFlag: 'Bandera', createAvatar: 'Avatar', body: 'Cuerpo', eyes: 'Ojos', color: 'Color', accessory: 'Accesorio', mouth: 'Boca', saveProfile: 'Guardar', edit: 'Editar', delete: 'Eliminar', cancel: 'Cancelar', save: 'Guardar', editReview: 'Editar', deleteReview: 'Eliminar', confirmDelete: '¿Eliminar?', placeOrder: 'Realizar pedido', remove: 'Eliminar', total: 'Total', connectionError: 'Error de conexión', languageChanged: 'Idioma cambiado', profileSaved: '¡Perfil guardado!', welcomeBackMsg: '¡Bienvenido!', accountCreated: '¡Cuenta creada!', loggedOut: 'Sesión cerrada', addedToCart: '¡Añadido!', cartEmpty: 'Tu carrito está vacío', pleaseLogin: 'Inicia sesión', orderPlaced: '¡Pedido realizado!', reviewSubmitted: '¡Reseña enviada!', selectRating: 'Selecciona puntuación', writeReviewMsg: 'Escribe reseña', reviewUpdated: '¡Reseña actualizada!', reviewDeleted: 'Reseña eliminada', adminRequired: 'Se requiere admin', productSaved: '¡Producto guardado!', failedToSave: 'Error al guardar', deleteProductConfirm: '¿Eliminar producto?', productDeleted: 'Producto eliminado', orderUpdated: 'Pedido actualizado', deleteOrderConfirm: '¿Eliminar pedido?', orderDeleted: 'Pedido eliminado', failed: 'Error', editProduct: 'Editar producto', addProductTitle: 'Añadir producto', productName: 'Nombre', productDescription: 'Descripción', productPrice: 'Precio', productImage: 'Imagen', productFeaturedLabel: 'Destacado', saveProductBtn: 'Guardar', updateOrder: 'Actualizar', orderStatus: 'Estado', pending: 'Pendiente', processing: 'Procesando', completed: 'Completado', cancelled: 'Cancelado', id: 'ID', name: 'Nombre', email: 'Email', date: 'Fecha', actions: 'Acciones', status: 'Estado', items: 'Artículos', standard: 'Estándar', jumpIntoFuture: 'Salta al', futureOfFun: 'Futuro divertido', experienceUltimate: 'Experimenta la sensación definitiva de rebote con nuestros pogo sticks neon. Para todas las edades.', superiorBounce: 'Salto Superior', superiorBounceDesc: 'Tecnología de resorte avanzada para mayor altura', builtToLast: 'Durabilidad', builtToLastDesc: 'Materiales premium para años de uso', funForAllAges: 'Para Todos', funForAllAgesDesc: 'Modelos para niños, jóvenes y adultos', energyReturn: 'Energía', energyReturnDesc: 'Ingeniería inteligente maximiza el rebote', pogojumpNeon: 'Neon Pro', pogojumpNeonDesc: 'Calidad profesional con más rebote', pogojumpJunior: 'Junior', pogojumpJuniorDesc: 'Para niños con seguridad extra', pogojumpCarbon: 'Carbono', pogojumpCarbonDesc: 'Construcción ultraligera de fibra de carbono', pogojumpExtreme: 'Extremo', pogojumpExtremeDesc: 'Altura máxima con resortes avanzados', yearsOfExcellence: 'Años de experiencia', redefininFun: 'Diversión desde 2018', footerText: '© 2026 PogoJump. Todos los derechos reservados.' }
     };
 
-    function t(key) {
-      return translations[currentLanguage]?.[key] || translations.en[key] || key;
-    }
-
+    function t(key) { return translations[currentLanguage]?.[key] || translations.en[key] || key; }
     function applyTranslations() {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        el.textContent = t(key);
-      });
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        el.placeholder = t(key);
-      });
+      document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.getAttribute('data-i18n'); if(key) el.textContent = t(key); });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { const key = el.getAttribute('data-i18n-placeholder'); if(key) el.placeholder = t(key); });
     }
-
     function applyTheme() {
       document.body.classList.remove('light-theme', 'light-theme-inverted', 'light-theme-ocean', 'light-theme-forest', 'light-theme-sunset', 'light-theme-minimal');
-      if (currentTheme === 'light') {
-        document.body.classList.add('light-theme-' + themePreset);
-      }
+      if(currentTheme === 'light') document.body.classList.add('light-theme-' + themePreset);
     }
 
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', function() {
       loadProducts();
       updateCartUI();
       applyTheme();
       applyTranslations();
-      if (token) checkAuth();
+      if(token) checkAuth();
     });
 
-    // Navigation
     function showSection(id) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      
-      if (id === 'cart') renderCart();
-      if (id === 'admin') loadAdminData();
-      if (id === 'settings') loadSettings();
-      if (id === 'profile') loadProfile();
-      
-      // Update sidebar active state
-      document.querySelectorAll('.sidebar-item').forEach(item => {
-        item.classList.toggle('active', item.dataset.section === id);
-      });
-      
-      // Close sidebar on mobile
-      if (window.innerWidth <= 768) {
-        document.getElementById('sidebar').classList.remove('active');
-      }
-      
+      const el = document.getElementById(id);
+      if(el) el.classList.add('active');
+      if(id === 'cart') renderCart();
+      if(id === 'admin') loadAdminData();
+      if(id === 'settings') loadSettings();
+      if(id === 'profile') loadProfile();
+      document.querySelectorAll('.sidebar-item').forEach(item => item.classList.toggle('active', item.dataset.section === id));
+      if(window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('active');
       window.scrollTo(0, 0);
       toggleMenu(false);
     }
@@ -2390,74 +1998,57 @@
     function toggleMenu(force) {
       const nav = document.getElementById('navLinks');
       const menu = document.querySelector('.mobile-menu');
-      if (force === false) {
-        nav.classList.remove('active');
-        menu.classList.remove('active');
-      } else {
-        nav.classList.toggle('active');
-        menu.classList.toggle('active');
-      }
+      if(force === false) { nav.classList.remove('active'); menu.classList.remove('active'); }
+      else { nav.classList.toggle('active'); menu.classList.toggle('active'); }
     }
 
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('active');
-    }
+    function toggleSidebar() { document.getElementById('sidebar').classList.toggle('active'); }
 
-    // Theme
     function setTheme(theme) {
       currentTheme = theme;
       localStorage.setItem('theme', theme);
       applyTheme();
-      
       document.getElementById('darkModeBtn').classList.toggle('active', theme === 'dark');
       document.getElementById('lightModeBtn').classList.toggle('active', theme === 'light');
-      document.getElementById('themePresetSection').style.display = theme === 'light' ? 'block' : 'none';
+      const presetSection = document.getElementById('themePresetSection');
+      if(presetSection) presetSection.style.display = theme === 'light' ? 'block' : 'none';
     }
 
     function setThemePreset(preset) {
       themePreset = preset;
       localStorage.setItem('themePreset', preset);
       applyTheme();
-      
-      document.querySelectorAll('.theme-preset').forEach(el => {
-        el.classList.toggle('active', el.dataset.preset === preset);
-      });
+      document.querySelectorAll('.theme-preset').forEach(el => el.classList.toggle('active', el.dataset.preset === preset));
     }
 
-    // Language
     function changeLanguage(lang) {
       currentLanguage = lang;
       localStorage.setItem('language', lang);
       applyTranslations();
-      showToast('Language changed');
+      showToast(t('languageChanged'));
     }
 
     function loadSettings() {
-      document.getElementById('languageSelect').value = currentLanguage;
+      const sel = document.getElementById('languageSelect');
+      if(sel) sel.value = currentLanguage;
       setTheme(currentTheme);
-      if (currentTheme === 'light') {
-        setThemePreset(themePreset);
-      }
+      if(currentTheme === 'light') setThemePreset(themePreset);
     }
 
-    // Profile
     function loadProfile() {
-      if (!currentUser) {
-        showSection('login');
-        return;
-      }
-      
-      document.getElementById('profileName').textContent = currentUser.name;
-      document.getElementById('profileEmail').textContent = currentUser.email;
-      document.getElementById('profileUsernameInput').value = currentUser.name;
-      
+      if(!currentUser) { showSection('login'); return; }
+      const nameEl = document.getElementById('profileName');
+      const emailEl = document.getElementById('profileEmail');
+      const inputEl = document.getElementById('profileUsernameInput');
+      if(nameEl) nameEl.textContent = currentUser.name;
+      if(emailEl) emailEl.textContent = currentUser.email;
+      if(inputEl) inputEl.value = currentUser.name;
       renderAvatarCreator();
       renderFlagSelector();
-      renderAvatarPreview(currentUser.avatar || { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' });
-      renderProfileAvatar(currentUser.avatar || { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' });
+      renderAvatarPreview(currentUser.avatar || currentAvatar);
+      renderProfileAvatar(currentUser.avatar || currentAvatar);
     }
 
-    // Avatar Creator
     const avatarOptions = {
       body: ['blob', 'sphere', 'cube', 'crystal', 'star', 'hexagon'],
       eyes: ['cyclops', 'threeEyes', 'robot', 'alien', 'glowing'],
@@ -2466,16 +2057,7 @@
       mouth: ['smile', 'cat', 'line', 'dot']
     };
 
-    const colorMap = {
-      cyan: '#00ffc8',
-      pink: '#ff6b9d',
-      violet: '#7c3aed',
-      green: '#22c55e',
-      gold: '#fbbf24',
-      silver: '#94a3b8'
-    };
-
-    let currentAvatar = { body: 'blob', eyes: 'cyclops', color: 'cyan', accessory: 'antenna', mouth: 'smile' };
+    const colorMap = { cyan: '#00ffc8', pink: '#ff6b9d', violet: '#7c3aed', green: '#22c55e', gold: '#fbbf24', silver: '#94a3b8' };
 
     function renderAvatarCreator() {
       const bodyContainer = document.getElementById('avatarBody');
@@ -2483,26 +2065,11 @@
       const colorContainer = document.getElementById('avatarColor');
       const accessoryContainer = document.getElementById('avatarAccessory');
       const mouthContainer = document.getElementById('avatarMouth');
-
-      bodyContainer.innerHTML = avatarOptions.body.map(opt => 
-        `<button class="avatar-option-btn ${currentAvatar.body === opt ? 'active' : ''}" onclick="selectAvatarOption('body', '${opt}')">${opt}</button>`
-      ).join('');
-
-      eyesContainer.innerHTML = avatarOptions.eyes.map(opt => 
-        `<button class="avatar-option-btn ${currentAvatar.eyes === opt ? 'active' : ''}" onclick="selectAvatarOption('eyes', '${opt}')">${opt}</button>`
-      ).join('');
-
-      colorContainer.innerHTML = avatarOptions.color.map(opt => 
-        `<button class="avatar-option-btn color-btn color-${opt} ${currentAvatar.color === opt ? 'active' : ''}" onclick="selectAvatarOption('color', '${opt}')"></button>`
-      ).join('');
-
-      accessoryContainer.innerHTML = avatarOptions.accessory.map(opt => 
-        `<button class="avatar-option-btn ${currentAvatar.accessory === opt ? 'active' : ''}" onclick="selectAvatarOption('accessory', '${opt}')">${opt}</button>`
-      ).join('');
-
-      mouthContainer.innerHTML = avatarOptions.mouth.map(opt => 
-        `<button class="avatar-option-btn ${currentAvatar.mouth === opt ? 'active' : ''}" onclick="selectAvatarOption('mouth', '${opt}')">${opt}</button>`
-      ).join('');
+      if(bodyContainer) bodyContainer.innerHTML = avatarOptions.body.map(opt => '<button class="avatar-option-btn ' + (currentAvatar.body === opt ? 'active' : '') + '" onclick="selectAvatarOption(\'body\', \'' + opt + '\')">' + opt + '</button>').join('');
+      if(eyesContainer) eyesContainer.innerHTML = avatarOptions.eyes.map(opt => '<button class="avatar-option-btn ' + (currentAvatar.eyes === opt ? 'active' : '') + '" onclick="selectAvatarOption(\'eyes\', \'' + opt + '\')">' + opt + '</button>').join('');
+      if(colorContainer) colorContainer.innerHTML = avatarOptions.color.map(opt => '<button class="avatar-option-btn color-btn color-' + opt + ' ' + (currentAvatar.color === opt ? 'active' : '') + '" onclick="selectAvatarOption(\'color\', \'' + opt + '\')"></button>').join('');
+      if(accessoryContainer) accessoryContainer.innerHTML = avatarOptions.accessory.map(opt => '<button class="avatar-option-btn ' + (currentAvatar.accessory === opt ? 'active' : '') + '" onclick="selectAvatarOption(\'accessory\', \'' + opt + '\')">' + opt + '</button>').join('');
+      if(mouthContainer) mouthContainer.innerHTML = avatarOptions.mouth.map(opt => '<button class="avatar-option-btn ' + (currentAvatar.mouth === opt ? 'active' : '') + '" onclick="selectAvatarOption(\'mouth\', \'' + opt + '\')">' + opt + '</button>').join('');
     }
 
     function selectAvatarOption(category, value) {
@@ -2514,112 +2081,55 @@
     function generateAvatarSVG(avatar) {
       const color = colorMap[avatar.color] || '#00ffc8';
       let bodySVG = '';
-      
       switch(avatar.body) {
-        case 'blob':
-          bodySVG = `<ellipse cx="75" cy="80" rx="55" ry="50" fill="${color}" opacity="0.8"/>`;
-          break;
-        case 'sphere':
-          bodySVG = `<circle cx="75" cy="80" r="55" fill="${color}"/>`;
-          break;
-        case 'cube':
-          bodySVG = `<rect x="30" y="40" width="90" height="80" rx="8" fill="${color}"/>`;
-          break;
-        case 'crystal':
-          bodySVG = `<polygon points="75,25 115,65 75,135 35,65" fill="${color}" opacity="0.8"/>`;
-          break;
-        case 'star':
-          bodySVG = `<polygon points="75,20 90,55 125,55 98,80 108,115 75,95 42,115 52,80 25,55 60,55" fill="${color}"/>`;
-          break;
-        case 'hexagon':
-          bodySVG = `<polygon points="75,25 115,50 115,110 75,135 35,110 35,50" fill="${color}"/>`;
-          break;
+        case 'blob': bodySVG = '<ellipse cx="75" cy="80" rx="55" ry="50" fill="' + color + '" opacity="0.8"/>'; break;
+        case 'sphere': bodySVG = '<circle cx="75" cy="80" r="55" fill="' + color + '"/>'; break;
+        case 'cube': bodySVG = '<rect x="30" y="40" width="90" height="80" rx="8" fill="' + color + '"/>'; break;
+        case 'crystal': bodySVG = '<polygon points="75,25 115,65 75,135 35,65" fill="' + color + '" opacity="0.8"/>'; break;
+        case 'star': bodySVG = '<polygon points="75,20 90,55 125,55 98,80 108,115 75,95 42,115 52,80 25,55 60,55" fill="' + color + '"/>'; break;
+        case 'hexagon': bodySVG = '<polygon points="75,25 115,50 115,110 75,135 35,110 35,50" fill="' + color + '"/>'; break;
       }
-
       let eyesSVG = '';
       switch(avatar.eyes) {
-        case 'cyclops':
-          eyesSVG = `<circle cx="75" cy="70" r="20" fill="#0a0a0f"/><circle cx="75" cy="70" r="8" fill="${color}"/>`;
-          break;
-        case 'threeEyes':
-          eyesSVG = `<circle cx="50" cy="65" r="12" fill="#0a0a0f"/><circle cx="75" cy="55" r="15" fill="#0a0a0f"/><circle cx="100" cy="65" r="12" fill="#0a0a0f"/><circle cx="50" cy="65" r="5" fill="${color}"/><circle cx="75" cy="55" r="7" fill="${color}"/><circle cx="100" cy="65" r="5" fill="${color}"/>`;
-          break;
-        case 'robot':
-          eyesSVG = `<rect x="45" y="60" width="25" height="15" rx="3" fill="#0a0a0f"/><rect x="80" y="60" width="25" height="15" rx="3" fill="#0a0a0f"/><rect x="50" y="64" width="8" height="7" fill="${color}"/><rect x="85" y="64" width="8" height="7" fill="${color}"/>`;
-          break;
-        case 'alien':
-          eyesSVG = `<ellipse cx="55" cy="70" rx="18" ry="22" fill="#0a0a0f"/><ellipse cx="95" cy="70" rx="18" ry="22" fill="#0a0a0f"/><ellipse cx="55" cy="70" rx="10" ry="15" fill="#1a1a2e"/><ellipse cx="95" cy="70" rx="10" ry="15" fill="#1a1a2e"/>`;
-          break;
-        case 'glowing':
-          eyesSVG = `<circle cx="60" cy="70" r="18" fill="${color}" opacity="0.3"/><circle cx="90" cy="70" r="18" fill="${color}" opacity="0.3"/><circle cx="60" cy="70" r="10" fill="${color}" opacity="0.6"/><circle cx="90" cy="70" r="10" fill="${color}" opacity="0.6"/><circle cx="60" cy="70" r="4" fill="#fff"/><circle cx="90" cy="70" r="4" fill="#fff"/>`;
-          break;
+        case 'cyclops': eyesSVG = '<circle cx="75" cy="70" r="20" fill="#0a0a0f"/><circle cx="75" cy="70" r="8" fill="' + color + '"/>'; break;
+        case 'threeEyes': eyesSVG = '<circle cx="50" cy="65" r="12" fill="#0a0a0f"/><circle cx="75" cy="55" r="15" fill="#0a0a0f"/><circle cx="100" cy="65" r="12" fill="#0a0a0f"/><circle cx="50" cy="65" r="5" fill="' + color + '"/><circle cx="75" cy="55" r="7" fill="' + color + '"/><circle cx="100" cy="65" r="5" fill="' + color + '"/>'; break;
+        case 'robot': eyesSVG = '<rect x="45" y="60" width="25" height="15" rx="3" fill="#0a0a0f"/><rect x="80" y="60" width="25" height="15" rx="3" fill="#0a0a0f"/><rect x="50" y="64" width="8" height="7" fill="' + color + '"/><rect x="85" y="64" width="8" height="7" fill="' + color + '"/>'; break;
+        case 'alien': eyesSVG = '<ellipse cx="55" cy="70" rx="18" ry="22" fill="#0a0a0f"/><ellipse cx="95" cy="70" rx="18" ry="22" fill="#0a0a0f"/><ellipse cx="55" cy="70" rx="10" ry="15" fill="#1a1a2e"/><ellipse cx="95" cy="70" rx="10" ry="15" fill="#1a1a2e"/>'; break;
+        case 'glowing': eyesSVG = '<circle cx="60" cy="70" r="18" fill="' + color + '" opacity="0.3"/><circle cx="90" cy="70" r="18" fill="' + color + '" opacity="0.3"/><circle cx="60" cy="70" r="10" fill="' + color + '" opacity="0.6"/><circle cx="90" cy="70" r="10" fill="' + color + '" opacity="0.6"/><circle cx="60" cy="70" r="4" fill="#fff"/><circle cx="90" cy="70" r="4" fill="#fff"/>'; break;
       }
-
       let accessorySVG = '';
       switch(avatar.accessory) {
-        case 'antenna':
-          accessorySVG = `<line x1="75" y1="25" x2="75" y2="5" stroke="${color}" stroke-width="3"/><circle cx="75" cy="5" r="5" fill="${color}"/>`;
-          break;
-        case 'halo':
-          accessorySVG = `<ellipse cx="75" cy="30" rx="40" ry="8" fill="none" stroke="${color}" stroke-width="3"/>`;
-          break;
-        case 'wings':
-          accessorySVG = `<path d="M20 80 Q5 50 20 30 Q35 50 20 80" fill="${color}" opacity="0.6"/><path d="M130 80 Q145 50 130 30 Q115 50 130 80" fill="${color}" opacity="0.6"/>`;
-          break;
-        case 'crown':
-          accessorySVG = `<polygon points="45,35 55,15 75,30 95,15 105,35 75,45" fill="${color}"/>`;
-          break;
-        case 'orb':
-          accessorySVG = `<circle cx="30" cy="50" r="8" fill="${color}" opacity="0.6"/><circle cx="120" cy="50" r="8" fill="${color}" opacity="0.6"/><circle cx="40" cy="120" r="6" fill="${color}" opacity="0.4"/><circle cx="110" cy="120" r="6" fill="${color}" opacity="0.4"/>`;
-          break;
+        case 'antenna': accessorySVG = '<line x1="75" y1="25" x2="75" y2="5" stroke="' + color + '" stroke-width="3"/><circle cx="75" cy="5" r="5" fill="' + color + '"/>'; break;
+        case 'halo': accessorySVG = '<ellipse cx="75" cy="30" rx="40" ry="8" fill="none" stroke="' + color + '" stroke-width="3"/>'; break;
+        case 'wings': accessorySVG = '<path d="M20 80 Q5 50 20 30 Q35 50 20 80" fill="' + color + '" opacity="0.6"/><path d="M130 80 Q145 50 130 30 Q115 50 130 80" fill="' + color + '" opacity="0.6"/>'; break;
+        case 'crown': accessorySVG = '<polygon points="45,35 55,15 75,30 95,15 105,35 75,45" fill="' + color + '"/>'; break;
+        case 'orb': accessorySVG = '<circle cx="30" cy="50" r="8" fill="' + color + '" opacity="0.6"/><circle cx="120" cy="50" r="8" fill="' + color + '" opacity="0.6"/><circle cx="40" cy="120" r="6" fill="' + color + '" opacity="0.4"/><circle cx="110" cy="120" r="6" fill="' + color + '" opacity="0.4"/>'; break;
       }
-
       let mouthSVG = '';
       switch(avatar.mouth) {
-        case 'smile':
-          mouthSVG = `<path d="M55 100 Q75 120 95 100" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>`;
-          break;
-        case 'cat':
-          mouthSVG = `<path d="M55 100 Q65 110 75 100 Q85 110 95 100" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>`;
-          break;
-        case 'line':
-          mouthSVG = `<line x1="60" y1="105" x2="90" y2="105" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>`;
-          break;
-        case 'dot':
-          mouthSVG = `<circle cx="75" cy="105" r="4" fill="#0a0a0f"/>`;
-          break;
+        case 'smile': mouthSVG = '<path d="M55 100 Q75 120 95 100" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>'; break;
+        case 'cat': mouthSVG = '<path d="M55 100 Q65 110 75 100 Q85 110 95 100" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>'; break;
+        case 'line': mouthSVG = '<line x1="60" y1="105" x2="90" y2="105" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round"/>'; break;
+        case 'dot': mouthSVG = '<circle cx="75" cy="105" r="4" fill="#0a0a0f"/>'; break;
       }
-
-      return `<svg viewBox="0 0 150 150" fill="none">${accessorySVG}${bodySVG}${eyesSVG}${mouthSVG}</svg>`;
+      return '<svg viewBox="0 0 150 150" fill="none">' + accessorySVG + bodySVG + eyesSVG + mouthSVG + '</svg>';
     }
 
-    function renderAvatarPreview(avatar) {
-      document.getElementById('avatarPreview').innerHTML = generateAvatarSVG(avatar);
-    }
+    function renderAvatarPreview(avatar) { const el = document.getElementById('avatarPreview'); if(el) el.innerHTML = generateAvatarSVG(avatar); }
+    function renderProfileAvatar(avatar) { const el = document.getElementById('profileAvatarDisplay'); if(el) el.innerHTML = generateAvatarSVG(avatar); }
 
-    function renderProfileAvatar(avatar) {
-      document.getElementById('profileAvatarDisplay').innerHTML = generateAvatarSVG(avatar);
-    }
-
-    // Flags
     const flags = [
-      { code: 'us', flag: '🇺🇸' }, { code: 'gb', flag: '🇬🇧' }, { code: 'de', flag: '🇩🇪' },
-      { code: 'fr', flag: '🇫🇷' }, { code: 'es', flag: '🇪🇸' }, { code: 'it', flag: '🇮🇹' },
-      { code: 'ru', flag: '🇷🇺' }, { code: 'jp', flag: '🇯🇵' }, { code: 'cn', flag: '🇨🇳' },
-      { code: 'kr', flag: '🇰🇷' }, { code: 'in', flag: '🇮🇳' }, { code: 'br', flag: '🇧🇷' },
-      { code: 'ca', flag: '🇨🇦' }, { code: 'au', flag: '🇦🇺' }, { code: 'mx', flag: '🇲🇽' },
-      { code: 'nl', flag: '🇳🇱' }, { code: 'se', flag: '🇸🇪' }, { code: 'ch', flag: '🇨🇭' },
-      { code: 'at', flag: '🇦🇹' }, { code: 'pl', flag: '🇵🇱' }
+      { code: 'us', flag: '🇺🇸' }, { code: 'gb', flag: '🇬🇧' }, { code: 'de', flag: '🇩🇪' }, { code: 'fr', flag: '🇫🇷' },
+      { code: 'es', flag: '🇪🇸' }, { code: 'it', flag: '🇮🇹' }, { code: 'ru', flag: '🇷🇺' }, { code: 'jp', flag: '🇯🇵' },
+      { code: 'cn', flag: '🇨🇳' }, { code: 'kr', flag: '🇰🇷' }, { code: 'in', flag: '🇮🇳' }, { code: 'br', flag: '🇧🇷' },
+      { code: 'ca', flag: '🇨🇦' }, { code: 'au', flag: '🇦🇺' }, { code: 'mx', flag: '🇲🇽' }, { code: 'nl', flag: '🇳🇱' },
+      { code: 'se', flag: '🇸🇪' }, { code: 'ch', flag: '🇨🇭' }, { code: 'at', flag: '🇦🇹' }, { code: 'pl', flag: '🇵🇱' }
     ];
-
-    let selectedFlag = null;
 
     function renderFlagSelector() {
       const container = document.getElementById('flagSelect');
-      container.innerHTML = flags.map(f => 
-        `<span class="flag-option ${currentUser?.flag === f.code ? 'active' : ''}" onclick="selectFlag('${f.code}', '${f.flag}')">${f.flag}</span>`
-      ).join('');
-      selectedFlag = currentUser?.flag || null;
+      if(!container) return;
+      container.innerHTML = flags.map(f => '<span class="flag-option ' + (currentUser?.flag === f.code ? 'active' : '') + '" onclick="selectFlag(\'' + f.code + '\', \'' + f.flag + '\')">' + f.flag + '</span>').join('');
     }
 
     function selectFlag(code, flagEmoji) {
@@ -2630,37 +2140,25 @@
 
     async function saveProfile() {
       const name = document.getElementById('profileUsernameInput').value.trim();
-      
       try {
-        const res = await fetch(`${API_URL}/users/profile`, {
+        const res = await fetch(API_URL + '/users/profile', {
           method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
-          body: JSON.stringify({
-            name: name || undefined,
-            avatar: currentAvatar,
-            flag: selectedFlag
-          })
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+          body: JSON.stringify({ name: name || undefined, avatar: currentAvatar, flag: selectedFlag })
         });
-
-        if (res.ok) {
+        if(res.ok) {
           const updatedUser = await res.json();
-          currentUser = { ...currentUser, ...updatedUser };
-          showToast('Profile saved!');
+          currentUser = Object.assign({}, currentUser, updatedUser);
+          showToast(t('profileSaved'));
           loadProfile();
         } else {
           const data = await res.json();
-          showToast(data.error || 'Failed to save profile', true);
+          showToast(data.error || 'Failed', true);
         }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
+      } catch(err) { showToast(t('connectionError'), true); }
     }
 
-    // Toast
-    function showToast(message, isError = false) {
+    function showToast(message, isError) {
       const toast = document.getElementById('toast');
       toast.textContent = message;
       toast.className = 'toast' + (isError ? ' error' : '');
@@ -2668,37 +2166,26 @@
       setTimeout(() => toast.classList.remove('show'), 3000);
     }
 
-    // Auth
     async function handleLogin(e) {
       e.preventDefault();
       const email = document.getElementById('loginEmail').value;
       const password = document.getElementById('loginPassword').value;
       const errorEl = document.getElementById('loginError');
-
       try {
-        const res = await fetch(`${API_URL}/auth/login`, {
+        const res = await fetch(API_URL + '/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })
         });
         const data = await res.json();
-        
-        if (!res.ok) {
-          errorEl.textContent = data.error;
-          errorEl.style.display = 'block';
-          return;
-        }
-
+        if(!res.ok) { errorEl.textContent = data.error; errorEl.style.display = 'block'; return; }
         token = data.token;
         currentUser = data.user;
         localStorage.setItem('token', token);
         updateAuthUI();
         showSection('products');
-        showToast('Welcome back!');
-      } catch (err) {
-        errorEl.textContent = 'Connection error';
-        errorEl.style.display = 'block';
-      }
+        showToast(t('welcomeBackMsg'));
+      } catch(err) { errorEl.textContent = 'Connection error'; errorEl.style.display = 'block'; }
     }
 
     async function handleRegister(e) {
@@ -2707,47 +2194,29 @@
       const email = document.getElementById('registerEmail').value;
       const password = document.getElementById('registerPassword').value;
       const errorEl = document.getElementById('registerError');
-
       try {
-        const res = await fetch(`${API_URL}/auth/register`, {
+        const res = await fetch(API_URL + '/auth/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, password })
         });
         const data = await res.json();
-        
-        if (!res.ok) {
-          errorEl.textContent = data.error;
-          errorEl.style.display = 'block';
-          return;
-        }
-
+        if(!res.ok) { errorEl.textContent = data.error; errorEl.style.display = 'block'; return; }
         token = data.token;
         currentUser = data.user;
         localStorage.setItem('token', token);
         updateAuthUI();
         showSection('products');
-        showToast('Account created!');
-      } catch (err) {
-        errorEl.textContent = 'Connection error';
-        errorEl.style.display = 'block';
-      }
+        showToast(t('accountCreated'));
+      } catch(err) { errorEl.textContent = 'Connection error'; errorEl.style.display = 'block'; }
     }
 
     async function checkAuth() {
       try {
-        const res = await fetch(`${API_URL}/auth/me`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-        if (res.ok) {
-          currentUser = await res.json();
-          updateAuthUI();
-        } else {
-          logout();
-        }
-      } catch (err) {
-        logout();
-      }
+        const res = await fetch(API_URL + '/auth/me', { headers: { 'Authorization': 'Bearer ' + token } });
+        if(res.ok) currentUser = await res.json();
+        else logout();
+      } catch(err) { logout(); }
     }
 
     function logout() {
@@ -2759,10 +2228,12 @@
       updateAuthUI();
       updateCartUI();
       document.getElementById('sidebar').classList.remove('active');
-      document.getElementById('sidebarToggle').style.display = 'none';
-      document.querySelector('main').classList.remove('main-with-sidebar');
+      const sbToggle = document.getElementById('sidebarToggle');
+      if(sbToggle) sbToggle.style.display = 'none';
+      const main = document.querySelector('main');
+      if(main) main.classList.remove('main-with-sidebar');
       showSection('hero');
-      showToast('Logged out');
+      showToast(t('loggedOut'));
     }
 
     function updateAuthUI() {
@@ -2772,305 +2243,57 @@
       const sidebar = document.getElementById('sidebar');
       const sidebarToggle = document.getElementById('sidebarToggle');
       const main = document.querySelector('main');
-
-      if (currentUser) {
+      if(currentUser) {
         authLinks.style.display = 'none';
         userLinks.style.display = 'block';
         document.getElementById('userName').textContent = currentUser.name;
         document.getElementById('adminBadge').style.display = currentUser.isAdmin ? 'inline' : 'none';
         adminLink.style.display = currentUser.isAdmin ? 'block' : 'none';
-        
-        // Show sidebar for logged in users
-        sidebarToggle.style.display = 'flex';
-        main.classList.add('main-with-sidebar');
+        if(sidebarToggle) sidebarToggle.style.display = 'flex';
+        if(main) main.classList.add('main-with-sidebar');
       } else {
         authLinks.style.display = 'block';
         userLinks.style.display = 'none';
-        adminLink.style.display = 'none';
-        
-        // Hide sidebar for logged out users
-        sidebar.classList.remove('active');
-        sidebarToggle.style.display = 'none';
-        main.classList.remove('main-with-sidebar');
+        if(adminLink) adminLink.style.display = 'none';
+        if(sidebar) sidebar.classList.remove('active');
+        if(sidebarToggle) sidebarToggle.style.display = 'none';
+        if(main) main.classList.remove('main-with-sidebar');
       }
     }
 
-      if (currentUser) {
-        authLinks.style.display = 'none';
-        userLinks.style.display = 'block';
-        document.getElementById('userName').textContent = currentUser.name;
-        document.getElementById('adminBadge').style.display = currentUser.isAdmin ? 'inline' : 'none';
-        adminLink.style.display = currentUser.isAdmin ? 'block' : 'none';
-      } else {
-        authLinks.style.display = 'block';
-        userLinks.style.display = 'none';
-        adminLink.style.display = 'none';
-      }
-    }
-
-    // Products
     async function loadProducts() {
       try {
-        const res = await fetch(`${API_URL}/products`);
+        const res = await fetch(API_URL + '/products');
         products = await res.json();
         renderProducts();
-      } catch (err) {
-        console.error('Failed to load products');
-      }
+      } catch(err) { console.error('Failed to load products'); }
     }
 
     function renderProducts() {
       const grid = document.getElementById('productsGrid');
-      grid.innerHTML = products.map(p => `
-        <div class="product-card">
-          <div class="product-image">
-            ${getProductSVG(p.image)}
-          </div>
-          <h3>${p.name}</h3>
-          <p class="description">${p.description}</p>
-          <span class="price">$${p.price}</span>
-          <div class="actions">
-            <button class="btn btn-primary" onclick="addToCart(${p.id})">Add to Cart</button>
-            <button class="btn btn-secondary" onclick="showProductDetail(${p.id})">Details</button>
-          </div>
-        </div>
-      `).join('');
+      if(!grid) return;
+      grid.innerHTML = products.map(p => '<div class="product-card"><div class="product-image">' + getProductSVG(p.image) + '</div><h3>' + p.name + '</h3><p class="description">' + p.description + '</p><span class="price">$' + p.price + '</span><div class="actions"><button class="btn btn-primary" onclick="addToCart(' + p.id + ')">' + t('addToCart') + '</button><button class="btn btn-secondary" onclick="showProductDetail(' + p.id + ')">' + t('details') + '</button></div></div>').join('');
     }
 
     function getProductSVG(type) {
       const svgs = {
-        neon: `<rect x="25" y="0" width="10" height="30" rx="2" fill="#00ffc8"/><rect x="20" y="25" width="20" height="40" rx="4" fill="#12121a" stroke="#00ffc8" stroke-width="2"/><circle cx="30" cy="45" r="8" fill="#00ffc8"/><rect x="28" y="65" width="4" height="35" rx="2" fill="#7c3aed"/><rect x="10" y="95" width="8" height="20" rx="2" fill="#ff6b9d"/><rect x="42" y="95" width="8" height="20" rx="2" fill="#ff6b9d"/>`,
-        pro: `<rect x="25" y="0" width="10" height="25" rx="2" fill="#7c3aed"/><rect x="18" y="20" width="24" height="45" rx="4" fill="#12121a" stroke="#7c3aed" stroke-width="2"/><circle cx="30" cy="42" r="10" fill="#7c3aed"/><rect x="27" y="65" width="6" height="40" rx="2" fill="#00ffc8"/><rect x="8" y="98" width="10" height="18" rx="2" fill="#ff6b9d"/><rect x="42" y="98" width="10" height="18" rx="2" fill="#ff6b9d"/>`,
-        junior: `<rect x="27" y="5" width="6" height="20" rx="2" fill="#ff6b9d"/><rect x="22" y="22" width="16" height="35" rx="3" fill="#12121a" stroke="#ff6b9d" stroke-width="2"/><circle cx="30" cy="38" r="6" fill="#ff6b9d"/><rect x="28" y="57" width="4" height="30" rx="2" fill="#7c3aed"/><rect x="14" y="84" width="6" height="16" rx="2" fill="#00ffc8"/><rect x="40" y="84" width="6" height="16" rx="2" fill="#00ffc8"/>`,
-        carbon: `<rect x="26" y="0" width="8" height="28" rx="2" fill="#e4e4e7"/><rect x="22" y="24" width="16" height="38" rx="3" fill="#12121a" stroke="#e4e4e7" stroke-width="1.5"/><circle cx="30" cy="42" r="7" fill="#e4e4e7"/><rect x="28" y="62" width="4" height="38" rx="2" fill="#00ffc8"/><rect x="12" y="96" width="6" height="18" rx="2" fill="#7c3aed"/><rect x="42" y="96" width="6" height="18" rx="2" fill="#7c3aed"/>`,
-        extreme: `<rect x="24" y="0" width="12" height="32" rx="2" fill="#ff6b9d"/><rect x="16" y="28" width="28" height="48" rx="5" fill="#12121a" stroke="#ff6b9d" stroke-width="2"/><circle cx="30" cy="50" r="12" fill="#ff6b9d"/><rect x="26" y="76" width="8" height="32" rx="2" fill="#7c3aed"/><rect x="6" y="102" width="10" height="16" rx="2" fill="#00ffc8"/><rect x="44" y="102" width="10" height="16" rx="2" fill="#00ffc8"/>`
+        neon: '<rect x="25" y="0" width="10" height="30" rx="2" fill="#00ffc8"/><rect x="20" y="25" width="20" height="40" rx="4" fill="#12121a" stroke="#00ffc8" stroke-width="2"/><circle cx="30" cy="45" r="8" fill="#00ffc8"/><rect x="28" y="65" width="4" height="35" rx="2" fill="#7c3aed"/><rect x="10" y="95" width="8" height="20" rx="2" fill="#ff6b9d"/><rect x="42" y="95" width="8" height="20" rx="2" fill="#ff6b9d"/>',
+        pro: '<rect x="25" y="0" width="10" height="25" rx="2" fill="#7c3aed"/><rect x="18" y="20" width="24" height="45" rx="4" fill="#12121a" stroke="#7c3aed" stroke-width="2"/><circle cx="30" cy="42" r="10" fill="#7c3aed"/><rect x="27" y="65" width="6" height="40" rx="2" fill="#00ffc8"/><rect x="8" y="98" width="10" height="18" rx="2" fill="#ff6b9d"/><rect x="42" y="98" width="10" height="18" rx="2" fill="#ff6b9d"/>',
+        junior: '<rect x="27" y="5" width="6" height="20" rx="2" fill="#ff6b9d"/><rect x="22" y="22" width="16" height="35" rx="3" fill="#12121a" stroke="#ff6b9d" stroke-width="2"/><circle cx="30" cy="38" r="6" fill="#ff6b9d"/><rect x="28" y="57" width="4" height="30" rx="2" fill="#7c3aed"/><rect x="14" y="84" width="6" height="16" rx="2" fill="#00ffc8"/><rect x="40" y="84" width="6" height="16" rx="2" fill="#00ffc8"/>',
+        carbon: '<rect x="26" y="0" width="8" height="28" rx="2" fill="#e4e4e7"/><rect x="22" y="24" width="16" height="38" rx="3" fill="#12121a" stroke="#e4e4e7" stroke-width="1.5"/><circle cx="30" cy="42" r="7" fill="#e4e4e7"/><rect x="28" y="62" width="4" height="38" rx="2" fill="#00ffc8"/><rect x="12" y="96" width="6" height="18" rx="2" fill="#7c3aed"/><rect x="42" y="96" width="6" height="18" rx="2" fill="#7c3aed"/>',
+        extreme: '<rect x="24" y="0" width="12" height="32" rx="2" fill="#ff6b9d"/><rect x="16" y="28" width="28" height="48" rx="5" fill="#12121a" stroke="#ff6b9d" stroke-width="2"/><circle cx="30" cy="50" r="12" fill="#ff6b9d"/><rect x="26" y="76" width="8" height="32" rx="2" fill="#7c3aed"/><rect x="6" y="102" width="10" height="16" rx="2" fill="#00ffc8"/><rect x="44" y="102" width="10" height="16" rx="2" fill="#00ffc8"/>'
       };
-      return `<svg viewBox="0 0 60 120" fill="none">${svgs[type] || svgs.neon}</svg>`;
+      return '<svg viewBox="0 0 60 120" fill="none">' + (svgs[type] || svgs.neon) + '</svg>';
     }
 
-    // Product Detail
-    let currentProductId = null;
-
-    function showProductDetail(productId) {
-      currentProductId = productId;
-      const product = products.find(p => p.id === productId);
-      if (!product) return;
-
-      document.getElementById('productDetailImage').innerHTML = getProductSVG(product.image);
-      document.getElementById('productDetailName').textContent = product.name;
-      document.getElementById('productDetailPrice').textContent = `$${product.price}`;
-      document.getElementById('productDetailDescription').textContent = product.description;
-      
-      document.getElementById('productDetailMeta').innerHTML = `
-        <span>${product.featured ? '⭐ Featured' : 'Standard'}</span>
-      `;
-
-      document.getElementById('productDetailAddToCart').onclick = () => addToCart(productId);
-
-      showSection('product-detail');
-      loadProductReviews(productId);
-    }
-
-    async function loadProductReviews(productId) {
-      try {
-        const res = await fetch(`${API_URL}/products/${productId}/with-reviews`);
-        const data = await res.json();
-
-        document.getElementById('avgRating').textContent = data.avgRating || '0.0';
-        document.getElementById('reviewCount').textContent = data.reviewCount || 0;
-        document.getElementById('avgStars').textContent = getStarString(data.avgRating || 0);
-
-        renderReviewForm();
-        renderReviewsList(data.reviews || []);
-      } catch (err) {
-        console.error('Failed to load reviews');
-      }
-    }
-
-    function getStarString(rating) {
-      const fullStars = Math.floor(rating);
-      const hasHalf = rating % 1 >= 0.5;
-      let stars = '★'.repeat(fullStars);
-      if (hasHalf) stars += '½';
-      stars += '☆'.repeat(5 - fullStars - (hasHalf ? 1 : 0));
-      return stars;
-    }
-
-    function renderReviewForm() {
-      const container = document.getElementById('reviewFormContainer');
-      
-      if (!currentUser) {
-        container.innerHTML = `
-          <div class="review-login-prompt">
-            <p>Please login to leave a review</p>
-            <button class="btn btn-primary" onclick="showSection('login')">Login</button>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = `
-        <div class="review-form">
-          <h3>Write a Review</h3>
-          <div class="form-group">
-            <label>Your Rating</label>
-            <div class="star-rating" id="starRatingInput">
-              ${[1,2,3,4,5].map(i => `<span class="star" data-rating="${i}" onclick="setRating(${i})">★</span>`).join('')}
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Your Review</label>
-            <textarea id="reviewText" placeholder="Share your experience with this product..."></textarea>
-          </div>
-          <button class="btn btn-primary" onclick="submitReview()">Submit Review</button>
-        </div>
-      `;
-    }
-
-    let selectedRating = 0;
-
-    function setRating(rating) {
-      selectedRating = rating;
-      document.querySelectorAll('#starRatingInput .star').forEach((star, index) => {
-        star.classList.toggle('filled', index < rating);
-      });
-    }
-
-    async function submitReview() {
-      if (!selectedRating) {
-        showToast('Please select a rating', true);
-        return;
-      }
-
-      const reviewText = document.getElementById('reviewText').value.trim();
-      if (!reviewText) {
-        showToast('Please write a review', true);
-        return;
-      }
-
-      try {
-        const res = await fetch(`${API_URL}/products/${currentProductId}/reviews`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
-          body: JSON.stringify({
-            rating: selectedRating,
-            review: reviewText
-          })
-        });
-
-        if (res.ok) {
-          showToast('Review submitted!');
-          loadProductReviews(currentProductId);
-          selectedRating = 0;
-        } else {
-          const data = await res.json();
-          showToast(data.error || 'Failed to submit review', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
-    }
-
-    function renderReviewsList(reviews) {
-      const container = document.getElementById('reviewsList');
-      
-      if (reviews.length === 0) {
-        container.innerHTML = `<p class="no-reviews">${t('noReviews')}</p>`;
-        return;
-      }
-
-      container.innerHTML = reviews.map(r => `
-        <div class="review-card">
-          <div class="review-card-header">
-            <div class="user-info">
-              <span class="user-name">${r.userName}</span>
-              <span class="review-date">${new Date(r.createdAt).toLocaleDateString()}</span>
-            </div>
-            <div class="review-stars">${getStarString(r.rating)}</div>
-          </div>
-          <p>${r.review}</p>
-          ${currentUser && (currentUser.id === r.userId || currentUser.isAdmin) ? `
-            <div class="review-card-actions">
-              <button class="btn btn-secondary" onclick="editReview(${r.id}, ${r.rating}, '${r.review.replace(/'/g, "\\'")}')">${t('edit')}</button>
-              <button class="btn btn-danger" onclick="deleteReview(${r.id})">${t('delete')}</button>
-            </div>
-          ` : ''}
-        </div>
-      `).join('');
-    }
-
-    async function editReview(reviewId, rating, reviewText) {
-      const newRating = prompt('Edit Rating (1-5):', rating);
-      if (newRating === null) return;
-      
-      const newText = prompt('Edit Review:', reviewText);
-      if (newText === null) return;
-
-      try {
-        const res = await fetch(`${API_URL}/reviews/${reviewId}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
-          body: JSON.stringify({
-            rating: parseInt(newRating),
-            review: newText
-          })
-        });
-
-        if (res.ok) {
-          showToast('Review updated!');
-          loadProductReviews(currentProductId);
-        } else {
-          const data = await res.json();
-          showToast(data.error || 'Failed to update review', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
-    }
-
-    async function deleteReview(reviewId) {
-      if (!confirm(t('confirmDelete'))) return;
-
-      try {
-        const res = await fetch(`${API_URL}/reviews/${reviewId}`, {
-          method: 'DELETE',
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        });
-
-        if (res.ok) {
-          showToast('Review deleted');
-          loadProductReviews(currentProductId);
-        } else {
-          const data = await res.json();
-          showToast(data.error || 'Failed to delete', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
-    }
-
-    // Cart
     function addToCart(productId) {
       const product = products.find(p => p.id === productId);
       const existing = cart.find(item => item.id === productId);
-      
-      if (existing) {
-        existing.quantity++;
-      } else {
-        cart.push({ ...product, quantity: 1 });
-      }
-      
+      if(existing) existing.quantity++;
+      else cart.push(Object.assign({}, product, { quantity: 1 }));
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartUI();
-      showToast('Added to cart!');
+      showToast(t('addedToCart'));
     }
 
     function removeFromCart(productId) {
@@ -3082,71 +2305,131 @@
 
     function updateCartUI() {
       const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-      document.getElementById('cartCount').textContent = count;
+      const el = document.getElementById('cartCount');
+      if(el) el.textContent = count;
     }
 
     function renderCart() {
       const container = document.getElementById('cartContent');
-      
-      if (cart.length === 0) {
-        container.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
-        return;
-      }
-
+      if(!container) return;
+      if(cart.length === 0) { container.innerHTML = '<div class="empty-cart">' + t('cartEmpty') + '</div>'; return; }
       const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      
-      container.innerHTML = `
-        ${cart.map(item => `
-          <div class="cart-item">
-            <div>
-              <strong>${item.name}</strong>
-              <br><small>$${item.price} x ${item.quantity}</small>
-            </div>
-            <div>
-              <span class="price">$${item.price * item.quantity}</span>
-              <button class="btn btn-danger" onclick="removeFromCart(${item.id})" style="margin-left: 1rem;">Remove</button>
-            </div>
-          </div>
-        `).join('')}
-        <div class="cart-total">Total: $${total}</div>
-        <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="placeOrder()">Place Order</button>
-      `;
+      container.innerHTML = cart.map(item => '<div class="cart-item"><div><strong>' + item.name + '</strong><br><small>$' + item.price + ' x ' + item.quantity + '</small></div><div><span class="price">$' + (item.price * item.quantity) + '</span><button class="btn btn-danger" onclick="removeFromCart(' + item.id + ')" style="margin-left:1rem;">' + t('remove') + '</button></div></div>').join('') + '<div class="cart-total">' + t('total') + ': $' + total + '</div><button class="btn btn-primary" style="width:100%;margin-top:1.5rem;" onclick="placeOrder()">' + t('placeOrder') + '</button>';
     }
 
     async function placeOrder() {
-      if (!token) {
-        showToast('Please login to place an order', true);
-        showSection('login');
-        return;
-      }
-
+      if(!token) { showToast(t('pleaseLogin'), true); showSection('login'); return; }
       const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      
       try {
-        const res = await fetch(`${API_URL}/orders`, {
+        const res = await fetch(API_URL + '/orders', {
           method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
           body: JSON.stringify({ items: cart, total })
         });
-
-        if (res.ok) {
-          cart = [];
-          localStorage.setItem('cart', JSON.stringify(cart));
-          updateCartUI();
-          showToast('Order placed successfully!');
-          showSection('hero');
-        } else {
-          showToast('Failed to place order', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
+        if(res.ok) { cart = []; localStorage.setItem('cart', JSON.stringify(cart)); updateCartUI(); showToast(t('orderPlaced')); showSection('hero'); }
+        else showToast(t('failed'), true);
+      } catch(err) { showToast(t('connectionError'), true); }
     }
 
-    // Admin
+    function showProductDetail(productId) {
+      currentProductId = productId;
+      const product = products.find(p => p.id === productId);
+      if(!product) return;
+      const imgEl = document.getElementById('productDetailImage');
+      const nameEl = document.getElementById('productDetailName');
+      const priceEl = document.getElementById('productDetailPrice');
+      const descEl = document.getElementById('productDetailDescription');
+      const metaEl = document.getElementById('productDetailMeta');
+      const btnEl = document.getElementById('productDetailAddToCart');
+      if(imgEl) imgEl.innerHTML = getProductSVG(product.image);
+      if(nameEl) nameEl.textContent = product.name;
+      if(priceEl) priceEl.textContent = '$' + product.price;
+      if(descEl) descEl.textContent = product.description;
+      if(metaEl) metaEl.innerHTML = '<span>' + (product.featured ? '⭐ ' + t('featured') : 'Standard') + '</span>';
+      if(btnEl) btnEl.onclick = () => addToCart(productId);
+      showSection('product-detail');
+      loadProductReviews(productId);
+    }
+
+    async function loadProductReviews(productId) {
+      try {
+        const res = await fetch(API_URL + '/products/' + productId + '/with-reviews');
+        const data = await res.json();
+        const avgEl = document.getElementById('avgRating');
+        const countEl = document.getElementById('reviewCount');
+        const starsEl = document.getElementById('avgStars');
+        if(avgEl) avgEl.textContent = data.avgRating || '0.0';
+        if(countEl) countEl.textContent = data.reviewCount || 0;
+        if(starsEl) starsEl.textContent = getStarString(data.avgRating || 0);
+        renderReviewForm();
+        renderReviewsList(data.reviews || []);
+      } catch(err) { console.error('Failed to load reviews'); }
+    }
+
+    function getStarString(rating) {
+      const fullStars = Math.floor(rating);
+      return '★'.repeat(fullStars) + '☆'.repeat(5 - fullStars);
+    }
+
+    function renderReviewForm() {
+      const container = document.getElementById('reviewFormContainer');
+      if(!container) return;
+      if(!currentUser) { container.innerHTML = '<div class="review-login-prompt"><p>' + t('loginToReview') + '</p><button class="btn btn-primary" onclick="showSection(\'login\')">' + t('login') + '</button></div>'; return; }
+      container.innerHTML = '<div class="review-form"><h3>' + t('writeReview') + '</h3><div class="form-group"><label>' + t('yourRating') + '</label><div class="star-rating" id="starRatingInput">' + [1,2,3,4,5].map(i => '<span class="star" data-rating="' + i + '" onclick="setRating(' + i + ')">★</span>').join('') + '</div></div><div class="form-group"><label>Review</label><textarea id="reviewText" placeholder="' + t('reviewPlaceholder') + '"></textarea></div><button class="btn btn-primary" onclick="submitReview()">' + t('submitReview') + '</button></div>';
+    }
+
+    function setRating(rating) {
+      selectedRating = rating;
+      document.querySelectorAll('#starRatingInput .star').forEach((star, index) => { star.classList.toggle('filled', index < rating); });
+    }
+
+    async function submitReview() {
+      if(!selectedRating) { showToast(t('selectRating'), true); return; }
+      const reviewText = document.getElementById('reviewText').value.trim();
+      if(!reviewText) { showToast(t('writeReviewMsg'), true); return; }
+      try {
+        const res = await fetch(API_URL + '/products/' + currentProductId + '/reviews', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+          body: JSON.stringify({ rating: selectedRating, review: reviewText })
+        });
+        if(res.ok) { showToast(t('reviewSubmitted')); loadProductReviews(currentProductId); selectedRating = 0; }
+        else { const data = await res.json(); showToast(data.error || 'Failed', true); }
+      } catch(err) { showToast(t('connectionError'), true); }
+    }
+
+    function renderReviewsList(reviews) {
+      const container = document.getElementById('reviewsList');
+      if(!container) return;
+      if(reviews.length === 0) { container.innerHTML = '<p class="no-reviews">' + t('noReviews') + '</p>'; return; }
+      container.innerHTML = reviews.map(r => '<div class="review-card"><div class="review-card-header"><div class="user-info"><span class="user-name">' + r.userName + '</span><span class="review-date">' + new Date(r.createdAt).toLocaleDateString() + '</span></div><div class="review-stars">' + getStarString(r.rating) + '</div></div><p>' + r.review + '</p>' + (currentUser && (currentUser.id === r.userId || currentUser.isAdmin) ? '<div class="review-card-actions"><button class="btn btn-secondary" onclick="editReview(' + r.id + ', ' + r.rating + ', \'' + r.review.replace(/'/g, "\\'") + '\')">' + t('edit') + '</button><button class="btn btn-danger" onclick="deleteReview(' + r.id + ')">' + t('delete') + '</button></div>' : '') + '</div>').join('');
+    }
+
+    async function editReview(reviewId, rating, reviewText) {
+      const newRating = prompt('Rating (1-5):', rating);
+      if(newRating === null) return;
+      const newText = prompt('Review:', reviewText);
+      if(newText === null) return;
+      try {
+        const res = await fetch(API_URL + '/reviews/' + reviewId, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+          body: JSON.stringify({ rating: parseInt(newRating), review: newText })
+        });
+        if(res.ok) { showToast(t('reviewUpdated')); loadProductReviews(currentProductId); }
+        else { const data = await res.json(); showToast(data.error || 'Failed', true); }
+      } catch(err) { showToast(t('connectionError'), true); }
+    }
+
+    async function deleteReview(reviewId) {
+      if(!confirm(t('confirmDelete'))) return;
+      try {
+        const res = await fetch(API_URL + '/reviews/' + reviewId, { method: 'DELETE', headers: { 'Authorization': 'Bearer ' + token } });
+        if(res.ok) { showToast(t('reviewDeleted')); loadProductReviews(currentProductId); }
+        else { const data = await res.json(); showToast(data.error || 'Failed', true); }
+      } catch(err) { showToast(t('connectionError'), true); }
+    }
+
     function showAdminPanel(id) {
       document.querySelectorAll('.admin-panel').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
@@ -3155,12 +2438,7 @@
     }
 
     async function loadAdminData() {
-      if (!currentUser?.isAdmin) {
-        showSection('hero');
-        showToast('Admin access required', true);
-        return;
-      }
-
+      if(!currentUser || !currentUser.isAdmin) { showSection('hero'); showToast(t('adminRequired'), true); return; }
       loadAdminStats();
       loadAdminProducts();
       loadAdminOrders();
@@ -3170,115 +2448,46 @@
     async function loadAdminStats() {
       try {
         const [productsRes, ordersRes, usersRes] = await Promise.all([
-          fetch(`${API_URL}/products`),
-          fetch(`${API_URL}/orders`, { headers: { 'Authorization': `Bearer ${token}` } }),
-          fetch(`${API_URL}/users`, { headers: { 'Authorization': `Bearer ${token}` } })
+          fetch(API_URL + '/products'),
+          fetch(API_URL + '/orders', { headers: { 'Authorization': 'Bearer ' + token } }),
+          fetch(API_URL + '/users', { headers: { 'Authorization': 'Bearer ' + token } })
         ]);
-
-        const products = await productsRes.json();
-        const orders = await ordersRes.json();
-        const users = await usersRes.json();
-
-        const totalRevenue = orders.reduce((sum, o) => sum + o.total, 0);
-
-        document.getElementById('adminStats').innerHTML = `
-          <div class="stat-card">
-            <div class="stat-number">${products.length}</div>
-            <div class="stat-label">Products</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">${orders.length}</div>
-            <div class="stat-label">Orders</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">${users.length}</div>
-            <div class="stat-label">Users</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">$${totalRevenue}</div>
-            <div class="stat-label">Revenue</div>
-          </div>
-        `;
-      } catch (err) {
-        console.error('Failed to load stats');
-      }
+        const productsData = await productsRes.json();
+        const ordersData = await ordersRes.json();
+        const usersData = await usersRes.json();
+        const totalRevenue = ordersData.reduce((sum, o) => sum + o.total, 0);
+        document.getElementById('adminStats').innerHTML = '<div class="stat-card"><div class="stat-number">' + productsData.length + '</div><div class="stat-label">Products</div></div><div class="stat-card"><div class="stat-number">' + ordersData.length + '</div><div class="stat-label">Orders</div></div><div class="stat-card"><div class="stat-number">' + usersData.length + '</div><div class="stat-label">Users</div></div><div class="stat-card"><div class="stat-number">$' + totalRevenue + '</div><div class="stat-label">Revenue</div></div>';
+      } catch(err) { console.error('Failed to load stats'); }
     }
 
     async function loadAdminProducts() {
       try {
-        const res = await fetch(`${API_URL}/products`);
-        const products = await res.json();
-        
-        document.getElementById('adminProductsTable').innerHTML = products.map(p => `
-          <tr>
-            <td>${p.id}</td>
-            <td>${p.name}</td>
-            <td>$${p.price}</td>
-            <td>${p.featured ? '✓' : '✗'}</td>
-            <td class="table-actions">
-              <button class="btn btn-secondary" onclick="editProduct(${p.id})">Edit</button>
-              <button class="btn btn-danger" onclick="deleteProduct(${p.id})">Delete</button>
-            </td>
-          </tr>
-        `).join('');
-      } catch (err) {
-        console.error('Failed to load products');
-      }
+        const res = await fetch(API_URL + '/products');
+        const productsData = await res.json();
+        document.getElementById('adminProductsTable').innerHTML = productsData.map(p => '<tr><td>' + p.id + '</td><td>' + p.name + '</td><td>$' + p.price + '</td><td>' + (p.featured ? '✓' : '✗') + '</td><td class="table-actions"><button class="btn btn-secondary" onclick="editProduct(' + p.id + ')">Edit</button><button class="btn btn-danger" onclick="deleteProduct(' + p.id + ')">Delete</button></td></tr>').join('');
+      } catch(err) { console.error('Failed to load products'); }
     }
 
     async function loadAdminOrders() {
       try {
-        const res = await fetch(`${API_URL}/orders`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-        const orders = await res.json();
-        
-        document.getElementById('adminOrdersTable').innerHTML = orders.map(o => `
-          <tr>
-            <td>${o.id}</td>
-            <td>${o.userName}<br><small>${o.userEmail}</small></td>
-            <td>${o.items.map(i => `${i.name} x${i.quantity}`).join(', ')}</td>
-            <td>$${o.total}</td>
-            <td><span class="status-badge status-${o.status}">${o.status}</span></td>
-            <td>${new Date(o.createdAt).toLocaleDateString()}</td>
-            <td class="table-actions">
-              <button class="btn btn-secondary" onclick="openOrderModal(${o.id}, '${o.status}')">Update</button>
-              <button class="btn btn-danger" onclick="deleteOrder(${o.id})">Delete</button>
-            </td>
-          </tr>
-        `).join('');
-      } catch (err) {
-        console.error('Failed to load orders');
-      }
+        const res = await fetch(API_URL + '/orders', { headers: { 'Authorization': 'Bearer ' + token } });
+        const ordersData = await res.json();
+        document.getElementById('adminOrdersTable').innerHTML = ordersData.map(o => '<tr><td>' + o.id + '</td><td>' + o.userName + '<br><small>' + o.userEmail + '</small></td><td>' + o.items.map(i => i.name + ' x' + i.quantity).join(', ') + '</td><td>$' + o.total + '</td><td><span class="status-badge status-' + o.status + '">' + o.status + '</span></td><td>' + new Date(o.createdAt).toLocaleDateString() + '</td><td class="table-actions"><button class="btn btn-secondary" onclick="openOrderModal(' + o.id + ', \'' + o.status + '\')">Update</button><button class="btn btn-danger" onclick="deleteOrder(' + o.id + ')">Delete</button></td></tr>').join('');
+      } catch(err) { console.error('Failed to load orders'); }
     }
 
     async function loadAdminUsers() {
       try {
-        const res = await fetch(`${API_URL}/users`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-        const users = await res.json();
-        
-        document.getElementById('adminUsersTable').innerHTML = users.map(u => `
-          <tr>
-            <td>${u.id}</td>
-            <td>${u.name}</td>
-            <td>${u.email}</td>
-            <td>${u.isAdmin ? '<span class="admin-badge">Admin</span>' : 'User'}</td>
-            <td>${new Date(u.createdAt).toLocaleDateString()}</td>
-          </tr>
-        `).join('');
-      } catch (err) {
-        console.error('Failed to load users');
-      }
+        const res = await fetch(API_URL + '/users', { headers: { 'Authorization': 'Bearer ' + token } });
+        const usersData = await res.json();
+        document.getElementById('adminUsersTable').innerHTML = usersData.map(u => '<tr><td>' + u.id + '</td><td>' + u.name + '</td><td>' + u.email + '</td><td>' + (u.isAdmin ? '<span class="admin-badge">Admin</span>' : 'User') + '</td><td>' + new Date(u.createdAt).toLocaleDateString() + '</td></tr>').join('');
+      } catch(err) { console.error('Failed to load users'); }
     }
 
-    // Product Modal
-    function openProductModal(id = null) {
+    function openProductModal(id) {
       const modal = document.getElementById('productModal');
       const title = document.getElementById('productModalTitle');
-      
-      if (id) {
+      if(id) {
         const product = products.find(p => p.id === id);
         document.getElementById('productId').value = product.id;
         document.getElementById('productName').value = product.name;
@@ -3296,17 +2505,13 @@
         document.getElementById('productFeatured').checked = false;
         title.textContent = 'Add Product';
       }
-      
       modal.classList.add('active');
     }
 
-    function closeProductModal() {
-      document.getElementById('productModal').classList.remove('active');
-    }
+    function closeProductModal() { document.getElementById('productModal').classList.remove('active'); }
 
     async function saveProduct(e) {
       e.preventDefault();
-      
       const id = document.getElementById('productId').value;
       const data = {
         name: document.getElementById('productName').value,
@@ -3315,118 +2520,52 @@
         image: document.getElementById('productImage').value,
         featured: document.getElementById('productFeatured').checked
       };
-
-      const url = id ? `${API_URL}/products/${id}` : `${API_URL}/products`;
+      const url = id ? API_URL + '/products/' + id : API_URL + '/products';
       const method = id ? 'PUT' : 'POST';
-
       try {
-        const res = await fetch(url, {
-          method,
-          headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
-          body: JSON.stringify(data)
-        });
-
-        if (res.ok) {
-          closeProductModal();
-          loadProducts();
-          loadAdminProducts();
-          loadAdminStats();
-          showToast('Product saved!');
-        } else {
-          showToast('Failed to save product', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
+        const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token }, body: JSON.stringify(data) });
+        if(res.ok) { closeProductModal(); loadProducts(); loadAdminProducts(); loadAdminStats(); showToast(t('productSaved')); }
+        else showToast(t('failedToSave'), true);
+      } catch(err) { showToast(t('connectionError'), true); }
     }
 
-    function editProduct(id) {
-      openProductModal(id);
-    }
+    function editProduct(id) { openProductModal(id); }
 
     async function deleteProduct(id) {
-      if (!confirm('Delete this product?')) return;
-
+      if(!confirm('Delete this product?')) return;
       try {
-        const res = await fetch(`${API_URL}/products/${id}`, {
-          method: 'DELETE',
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-
-        if (res.ok) {
-          loadProducts();
-          loadAdminProducts();
-          loadAdminStats();
-          showToast('Product deleted');
-        } else {
-          showToast('Failed to delete', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
+        const res = await fetch(API_URL + '/products/' + id, { method: 'DELETE', headers: { 'Authorization': 'Bearer ' + token } });
+        if(res.ok) { loadProducts(); loadAdminProducts(); loadAdminStats(); showToast(t('productDeleted')); }
+        else showToast(t('failedToDelete'), true);
+      } catch(err) { showToast(t('connectionError'), true); }
     }
 
-    // Order Modal
     function openOrderModal(id, status) {
       document.getElementById('orderId').value = id;
       document.getElementById('orderStatus').value = status;
       document.getElementById('orderModal').classList.add('active');
     }
 
-    function closeOrderModal() {
-      document.getElementById('orderModal').classList.remove('active');
-    }
+    function closeOrderModal() { document.getElementById('orderModal').classList.remove('active'); }
 
     async function updateOrderStatus(e) {
       e.preventDefault();
-      
       const id = document.getElementById('orderId').value;
       const status = document.getElementById('orderStatus').value;
-
       try {
-        const res = await fetch(`${API_URL}/orders/${id}`, {
-          method: 'PUT',
-          headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-          },
-          body: JSON.stringify({ status })
-        });
-
-        if (res.ok) {
-          closeOrderModal();
-          loadAdminOrders();
-          showToast('Order updated');
-        } else {
-          showToast('Failed to update', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
+        const res = await fetch(API_URL + '/orders/' + id, { method: 'PUT', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token }, body: JSON.stringify({ status }) });
+        if(res.ok) { closeOrderModal(); loadAdminOrders(); showToast(t('orderUpdated')); }
+        else showToast(t('failedToUpdate'), true);
+      } catch(err) { showToast(t('connectionError'), true); }
     }
 
     async function deleteOrder(id) {
-      if (!confirm('Delete this order?')) return;
-
+      if(!confirm('Delete this order?')) return;
       try {
-        const res = await fetch(`${API_URL}/orders/${id}`, {
-          method: 'DELETE',
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-
-        if (res.ok) {
-          loadAdminOrders();
-          loadAdminStats();
-          showToast('Order deleted');
-        } else {
-          showToast('Failed to delete', true);
-        }
-      } catch (err) {
-        showToast('Connection error', true);
-      }
+        const res = await fetch(API_URL + '/orders/' + id, { method: 'DELETE', headers: { 'Authorization': 'Bearer ' + token } });
+        if(res.ok) { loadAdminOrders(); loadAdminStats(); showToast(t('orderDeleted')); }
+        else showToast(t('failedToDelete'), true);
+      } catch(err) { showToast(t('connectionError'), true); }
     }
   </script>
 </body>
